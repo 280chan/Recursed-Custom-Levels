@@ -10,14 +10,14 @@ function start()
 xxn...:....:......|.
 xxu...:....:......|.
 xxn...:....'......|.
-xxu...:..........n[]
-xxn...'..........uxx
+xxu...:...........|.
+xxn...'........[][][
 xxu..............nxx
 xxn..............uxx
 xxu..............nxx
-xxn======........uxx
-xxuxxxxxn........nxx
-[][][]xxu=====...uxx
+xxn========......uxx
+xxuxxxxxxxn......nxx
+[][][]xxxxu===...uxx
 xxxxxnxxxxxxxn...nxx
 xxxxxuxxxxxxxu===uxx
 xxxxx[][][][][][][][
@@ -25,7 +25,8 @@ xxxxxn....*...*....n
 ]])
 
   Spawn("player", 5.2, 7)
-  Global("chest", 11.5, 9.5, "corridor")
+  Global("box", 7.5, 7.5)
+  Global("chest", 17.5, 3.5, "corridor")
 end
 
 function corridor()
@@ -53,74 +54,50 @@ end
 
 function pocket()
   ApplyTiles(castle, 0, 0, [[
-xxxxn........nxxxxxx
-[][]u........uxxxxxx
 .............nxxxxxx
 .............uxxxxxx
 .............nxxxxxx
-][][]........uxxxxxx
-xxxxn........nxxxxxx
-xxxxu........uxxxxxx
-xxxx[][][][][]xxxxxx
-xxxxxn.####.nxxxxxxx
-xxxxxu.####.uxxxxxxx
-xxxxxn.####.nxxxxxxx
-xxxxxu.####.uxxxxxxx
+[][]n........uxxxxxx
+xxxxu........nxxxxxx
+xxxxn........u[][]xx
+xxxxu............nxx
+xxxxn............uxx
+xxxxu............nxx
+xxxx[][][][][]...uxx
+xxxxuu.####.uu...nxx
+xxxxnn.####.nn...uxx
+xxxxuu.####.uu[][]xx
 xxx[][][][][][]xxxxx
 xxxn..........nxxxxx
 ]])
 
-  Spawn("player", 7.9, 7)
-  Spawn("crystal", 2.5, 3.5)
-  Spawn("chest", -0.4, 4.5, "fanRoom")
-end
-
-function fanRoom()
-  ApplyTiles(glitch, 0, 0, [[
-oooooooooooooooooooo
-oooooooooooooooooooo
-oos............../oo
-oos............../oo
-oo/..............soo
-oo/............../oo
-oos............../oo
-oos............../oo
-ooo..............ooo
-ooo..............ooo
-oooooooooooooooooooo
-oooooooosooooooooooo
-ooosoooooooooooosooo
-oooooooooosooooooooo
-oooooooooooooooooooo
-]])
-
-  Spawn("player", 10, 9)
-  Spawn("fan", 17.6, 3.5)
-
+  Spawn("player", 7.9, 8)
+  Spawn("crystal", 2.5, 1.5)
+  Spawn("chest", -0.4, 2.5, "dia")
+  Spawn("box", 15.5, 11.5)
 end
 
 function reject()
   ApplyTiles(glitch, 0, 0, [[
-oosoosooosoooosos///
-/////////////////os/
-/////////////////oso
-/sossosssosossss/s/o
-o/sos//ss//s/oss/o//
-s/o//////////////ooo
-s/o//////////////oso
-o/s/ossoososososo//o
-//s..............o//
-oso..............sso
-/oo..............so/
-oso..............o/o
-//sosososssoosoos//o
-oss/////////////////
-oss/////////////////
+oooooooooooooooooooo
+oooooooooooooosooooo
+oooosooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooo/.............ooo
+ooo..............ooo
+ooo..............ooo
+ooo..............ooo
+ooo..............ooo
+oooooooooooooooooooo
+ooooooooosoooooooooo
+ooooooooooooooooosoo
+ooosoooooooooooooooo
+oooooooooooooooooooo
 ]])
 
-  Spawn("player", 4, 11)
-  Spawn("chest", -0.4, 3.5, "dia")
-  Spawn("record", 7.9, 11.5, "sounds/voices/d6")
+  Spawn("player", 4, 9)
+  Spawn("record", 7.9, 9.5, "sounds/voices/d6")
 end
 
 function dia()
@@ -130,20 +107,21 @@ oooooooooooooooooooo
 ooo..............ooo
 ooo..............ooo
 ooo..............ooo
-ooo..............ooo
-ooo..............ooo
-ooo..............ooo
-ooo..............ooo
-ooo..............ooo
+ooo..ooooooooooooooo
+ooo..o........o..ooo
+ooo..o.ooooo..o..ooo
+ooo..o.o......o.oooo
+ooo--o.o.........ooo
+ooo--o.o.........ooo
+ooo....o.........ooo
+ooo....o.........ooo
 oooooooooooooooooooo
-oooooooosooooooooooo
-ooosoooooooooooosooo
-oooooooooosooooooooo
 oooooooooooooooooooo
 ]])
 
-  Spawn("player", 10, 9)
-  Spawn("diamond", 10, 3.5)
+  Spawn("player", 10, 12)
+  Spawn("diamond", 15.5, 3.5)
+  Global("fan", 16.6, 7.5)
 
 end
 
