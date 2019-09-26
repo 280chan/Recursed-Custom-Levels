@@ -28,10 +28,9 @@ oooooooo....oooooooo
 ]])
 
   Global("generic", 3, 8.5)
-  Spawn("player", 5, 8)
+  Spawn("player", 10, 11)
   Spawn("chest", 7, 8.5, "roomA")
   Spawn("chest", 13, 8.5, "roomB")
-  Global("generic", 15, 8.5)
   Spawn("generic", 17, 8.5)
 end
 
