@@ -54,7 +54,7 @@ end
 
 function pocket()
   ApplyTiles(castle, 0, 0, [[
-.............nxxxxxx
+][][]........nxxxxxx
 .............uxxxxxx
 .............nxxxxxx
 [][]n........uxxxxxx
@@ -72,7 +72,7 @@ xxxn..........nxxxxx
 ]])
 
   Spawn("player", 7.9, 8)
-  Spawn("crystal", 2.5, 1.5)
+  Spawn("crystal", 2.5, 2)
   Spawn("chest", -0.4, 2.5, "dia")
   Spawn("box", 15.5, 11.5)
 end
