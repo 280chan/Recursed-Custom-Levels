@@ -57,24 +57,24 @@ function pocket()
 ][][]........nxxxxxx
 .............uxxxxxx
 .............nxxxxxx
-[][]n........uxxxxxx
-xxxxu........nxxxxxx
-xxxxn........u[][]xx
-xxxxu............nxx
-xxxxn............uxx
-xxxxu............nxx
+.............uxxxxxx
+[][]n........nxxxxxx
+xxxxu........uxxxxxx
+xxxxn........[][]nxx
+xxxxu............uxx
+xxxxn............nxx
+xxxxu............uxx
 xxxx[][][][][]...uxx
 xxxxuu.####.uu...nxx
 xxxxnn.####.nn...uxx
-xxxxuu.####.uu[][]xx
-xxx[][][][][][]xxxxx
+xx[][][][][][][][]xx
 xxxn..........nxxxxx
 ]])
 
-  Spawn("player", 7.9, 8)
-  Spawn("crystal", 2.5, 2)
-  Spawn("chest", -0.4, 2.5, "dia")
-  Spawn("box", 15.5, 11.5)
+  Spawn("player", 7.9, 9)
+  Spawn("crystal", 2.5, 2.5)
+  Spawn("chest", -0.4, 3.5, "dia")
+  Spawn("box", 15.5, 12.5)
 end
 
 function reject()
