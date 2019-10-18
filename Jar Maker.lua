@@ -172,14 +172,14 @@ oo.................o
 o..................o
 o.....ooooooooooo..o
 o...............o..o
-ooo-............o..o
-ooo.wwwwwwwwwwwwo..o
-ooo.wwwwwwwwwwwoo..o
-ooo-ooooooooooooo..o
-ooooowwwooooooooowwo
+oooo............o..o
+oooo.wwwwwwwwwwwo..o
+oooo.wwwwwwwwwwoo..o
+oooo-oooooooooooo..o
+oooooowwwoooooooowwo
 oowwwwwwwwwwwwwwwwwo
-oowwwwowwwwwwwwwwwwo
-oowwwwowwwwwwwwwwwwo
+oowwwwwowwwwwwwwwwwo
+oowwwwwowwwwwwwwwwwo
 oooooooooooooooooooo
 ]])
 else
@@ -190,20 +190,21 @@ oo.................o
 o..................o
 o.....ooooooooooo..o
 o...............o..o
-ooo-............o..o
-ooo.............o..o
-ooo............oo..o
-ooo-ooooooooooooo..o
-ooooo...ooooooooo..o
+oooo............o..o
+oooo............o..o
+oooo...........oo..o
+oooo-oooooooooooo..o
+oooooo...oooooooo..o
 oo.................o
-oo....o............o
-oowwwwowwwwwwwwwwwwo
+oo.....o...........o
+oowwwwwowwwwwwwwwwwo
 oooooooooooooooooooo
 ]])
 end
   Spawn("player", 7.5, 8)
   Spawn("yield", 11.5, 8)
   Spawn("lock", 1.5, 4.5)
+  Spawn("lock", 4.5, 7.5)
   Global("lock", 10.5, 2.5)
   Spawn("crystal", 3.5, 12.5)
 end
