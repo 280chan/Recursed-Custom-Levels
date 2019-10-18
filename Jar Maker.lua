@@ -14,7 +14,7 @@ oooooooooooooooooooo
 oaaaaaaaaooaaaaaaaao
 oaaaaaaaaooaaaaaaaao
 oaaaaaaaaooaaaaaaaao
-oaaaaaaaaooaaaaaaaao
+oaaooooooooooooooaao
 oaaaaaaaaooaaaaaaaao
 oaaaaaaaaooaaaaaaaao
 oaaaaaaaaooaaaaaaaao
@@ -27,15 +27,16 @@ ooooooo......ooooooo
 ooooooo------ooooooo
 ]])
 
-  Spawn("generic", 3, 7.5)
   Spawn("player", 10, 13)
-  Spawn("chest", 5, 7.5, "storageA")
-  Spawn("chest", 7, 7.5, "roomA")
-  Spawn("chest", 13, 7.5, "roomB")
-  Spawn("chest", 14.25, 7.5, "storageB")
-  Spawn("key", 15.5, 7.5)
-  Spawn("generic", 16.75, 7.5)
-  Spawn("generic", 18, 7.5)
+  Spawn("generic", 6, 3.5)
+  Spawn("chest", 3, 7.5, "storageA")
+  Spawn("chest", 6, 7.5, "roomA")
+  
+  Spawn("chest", 14, 7.5, "roomB")
+  Spawn("chest", 17, 7.5, "storageB")
+  Spawn("generic", 12, 3.5)
+  Spawn("key", 14, 3.5)
+  Spawn("generic", 16, 3.5)
 end
 
 function storageA(is_wet)
