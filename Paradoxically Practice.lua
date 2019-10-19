@@ -82,31 +82,39 @@ end
 function reject()
   ApplyTiles(glitch, 0, 0, [[
 oooooooooooooooooooo
-oooooooooooooooooooo
+oooooooo.ooooooo.ooo
 oooooooooooooooooooo
 oo.................o
 oo.................o
 oo.................o
-oo.........ooooooooo
-oo.........ooooooooo
-oo.........ooo.ooooo
-oo.........ooooooooo
-oo.........ooooooooo
-ooooooooooooooooo.oo
+oo........oooooooooo
+oo........oooooooooo
+oo.................o
+oo.................o
+oo.................o
 oooooooooooooooooooo
-oooooooooooooooooooo
+oo.ooooooooooooo.ooo
+ooooooooooo.oooooooo
 oooooooooooooooooooo
 ]])
 
   Spawn("player", 3.4, 10)
   Spawn("key", 6.1, 10.5)
   Spawn("chest", 8.0, 10.5, "dungeon")
-  Spawn("lock", 12.5, 4.5)
-  Global("lock", 14, 4.5)
+  
+  Spawn("lock", 11, 4.5)
+  Global("lock", 12.5, 4.5)
+  Spawn("lock", 14, 4.5)
   Spawn("lock", 15.5, 4.5)
   Spawn("diamond", 17.5, 4.5)
-
+  
+  Spawn("lock", 11, 9.5)
+  Global("lock", 13.25, 9.5)
+  Spawn("lock", 15.5, 9.5)
+  Global("key", 17.5, 10.5)
+  
   Spawn("record", 5.6, 10.5, "sounds/voices/v5r")
+
 end
 
 function dungeon()
