@@ -28,9 +28,9 @@ xxxxxxxxxxxxxxxxxxxx
 ]])
 
   Spawn("player", 13.5, 13)
-  Global("chest", 15, 3.5, "limbo")
-  Spawn("chest", 18, 7.5, "lust")
-  Spawn("chest", 16, 11.5, "lust")
+  Global("chest", 15, 3.5, "lust")
+  Spawn("chest", 18, 7.5, "limbo")
+  Spawn("chest", 16, 11.5, "limbo")
 
 end
 
@@ -69,10 +69,10 @@ xxxxxxxxxxxxxxxx|55|
 8888889............|
 5555556...........,|
 5555556.........7888
+5555556;:.......4555
 555578889.......4555
 555545556.......4555
 5555455568889TTT4555
-5555455565556TTT4555
 ]])
 
   Spawn("player", 14, 12)
@@ -99,8 +99,8 @@ oooooooooooooooooooo
 ]])
 
   Spawn("player", 3.4, 10)
-  Spawn("key", 7.1, 10.5)
-  Spawn("chest", 10.0, 10.5, "dungeon")
+  Spawn("key", 6.1, 10.5)
+  Spawn("chest", 8.0, 10.5, "dungeon")
   Spawn("lock", 12.5, 4.5)
   Global("lock", 14, 4.5)
   Spawn("lock", 15.5, 4.5)
@@ -116,11 +116,11 @@ oooooooooooooooooooo
 oooooooooooooooooooo
 oooooooooooooooooooo
 oooooooooooooooooooo
-oooo............>ooo
-oooo.............ooo
-oooo.............ooo
-oooo.............ooo
-oooo.............ooo
+oooo...........>oooo
+oooo............oooo
+oooo............oooo
+oooo............oooo
+oooo............oooo
 oooooooooooooooooooo
 oooooooo>ooooooooooo
 oooooooooooooooooooo
@@ -128,8 +128,8 @@ oooooooooooooooooooo
 oooooooooooooooooooo
 ]])
 
-  Spawn("player", 7.1, 9)
-  Global("fan", 11.2, 9.5)
+  Spawn("player", 6.1, 9)
+  Global("fan", 10.2, 9.5)
   Global("chest", 14.3, 9.5, "dungeon")
 end
 
