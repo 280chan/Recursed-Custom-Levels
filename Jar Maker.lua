@@ -251,11 +251,13 @@ o..o..............oo
 o--oooooooooooooooos
 ]])
   Spawn("player", 2, 13)
-  Spawn("lock", 7.5, 9.5)
-  Spawn("lock", 4.5, 6.5)
   Spawn("fan", 2.5, 7.5)
+  Spawn("key", 4.5, 6.5)
+  Spawn("lock", 6.4, 6.5)
+  Spawn("lock", 7.5, 9.5)
   Spawn("generic", 9.5, 13.5)
   Spawn("diamond", 13.5, 2.5)
+  Spawn("lock", 15.5, 2.5)
 end
 
 tiles = "tiles/outrun"
