@@ -16,21 +16,21 @@ local cloud = { ["<"] = "cloud_l", o = "cloud", [">"] = "cloud_r", ["-"] = "clou
 				
 function start(is_wet)
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
+oooooooooooooow1313o
+o............oo....o
 o..................o
 o..................o
-o..................o
-o.............oooooo
+o..............ooooo
 owwwwwwwwwwwwwwwwwwo
 ooooowwwwwwwwwwwwwwo
 owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwooooo
+owwwwwwwwwwwwwwwoooo
 owwwwwwwwwwwwwwwwwwo
 oooowwwwwwwwwwwwwwwo
 owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwoooo
-owwwwwwwwwwwwwwwo<>>
-ooooooooooooooooo<oo
+owwwwwwwwwwwwwwwwooo
+owwwwwwwwwwwwwwwwo<>
+oooooooooooooooooo<>
 ]])
   Spawn("generic", 6, 12.5)
   Global("chest", 8, 12.5, "roomA")
@@ -40,43 +40,43 @@ end
 function roomA(is_wet)
 if is_wet then
   ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
+oooooooooooooow1313o
+o............oo....o
 o..................o
 o..................o
-o..................o
-o.............oooooo
+o..............ooooo
 owwwwwwwwwwwwwwwwwwo
 ooooowwwwwwwwwwwwwwo
 owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwooooo
+owwwwwwwwwwwwwwwoooo
 owwwwwwwwwwwwwwwwwwo
 oooowwwwwwwwwwwwwwwo
 owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwoooo
-owwwwwwwwwwwwwwwo<>>
-ooooooooooooooooo<oo
+owwwwwwwwwwwwwwwwooo
+owwwwwwwwwwwwwwwwo<>
+oooooooooooooooooo<>
 ]])
+  Spawn("crystal", 17.5, 2.5)
 else
 	ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-o..................o
-o..................o
-o..................o
-o.............oooooo
+oooooooooooooo.7979o
+o............oo4646o
+o..............4646o
+o..............1313o
+o..............ooooo
 o..................o
 ooooo..............o
 o..................o
-o..............ooooo
+o...............oooo
 o..................o
 oooo...............o
 o..................o
-owwwwwwwwwwwwwwwoooo
-owwwwwwwwwwwwwwwo<>>
-ooooooooooooooooo<oo
+owwwwwwwwwwwwwwwwooo
+owwwwwwwwwwwwwwwwo<>
+oooooooooooooooooo<>
 ]])
 end
   Spawn("player", 10, 12)
-  Spawn("crystal", 17.5, 2.5)
   Spawn("generic", 7.5, 12.5)
   Spawn("yield", 12.5, 12)
 end
@@ -143,15 +143,15 @@ oooooooooooooooooooo
 o..................o
 o..................o
 o..................o
-o---oooooooooooooooo
-o...oosooooooosooooo
-o...oooooooooooooooo
-o---oooooooooooosooo
-o...ooooooosoooooooo
-o...oooosooooooooooo
+oooooooooooooooooooo
+osoooosooooooosooooo
+oooosooooooooooooooo
+oooooooooooooooosooo
+oosoooooooosoooooooo
+oooooooosoooooooooso
 oooooooooooooooooooo
 ]])
-  Spawn("player", 2.5, 13)
+  Spawn("player", 2.5, 7)
   Spawn("chest", 13, 7.5, "diamondroom")
   Spawn("chest", 11, 7.5, "empty")
   Spawn("cauldron", 15, 7.5, "reject")
