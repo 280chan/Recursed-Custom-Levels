@@ -71,8 +71,8 @@ o...............oooo
 o..................o
 oooo...............o
 o..................o
-owwwwwwwwwwwwwwwwooo
-owwwwwwwwwwwwwwwwo<>
+o................ooo
+o................o<>
 oooooooooooooooooo<>
 ]])
 end
