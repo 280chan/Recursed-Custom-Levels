@@ -1,5 +1,3 @@
--- Double loop-back mess
-
 local villa = { o = "stone", t = "stonetop", ["8"] = "stucco",
                 ["7"] = "arch_l", ["9"] = "arch_r", ["1"] = "stonebottom_l", ["3"] = "stonebottom_r",
                 ["|"] = "pillar",  ["T"] = "pillartop", ["/"] = "grasspillar",
