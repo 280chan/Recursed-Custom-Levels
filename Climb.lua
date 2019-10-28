@@ -5,12 +5,12 @@ local metal = {["7"] = "buoy_ul", ["9"] = "buoy_ur",
                 E = "panel_k1", F = "panel_k2", B = "panel_k3",
                 o = "box", ["="] = "girder_h", ["|"] = "girder_v",
                 w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge" }
-local black = { o = "glitch", s = "glitchhole", ["-"] = "glitchledge" }
+local black = { o = "glitch", s = "glitchhole", ["-"] = "glitchledge", w = "water"}
 local crazy = { o = "glitch", z = "cloud", ["#"] = "wetbox", ["?"] = "girder",
                 ["1"] = "ledge", ["2"] = "glitchledge", ["3"] = "cloudledge",
                 ["4"] = "clockwise", ["5"] = "widdershins" }
 
-local cloud = { ["<"] = "cloud_l", o = "cloud", [">"] = "cloud_r", ["-"] = "cloudledge" }
+local cloud = { ["<"] = "cloud_l", o = "cloud", [">"] = "cloud_r", ["-"] = "cloudledge", w = "water" }
 				
 -- main
 				
@@ -158,6 +158,25 @@ oooooooooooooooooooo
 end
 
 function empty(is_wet)
+if is_wet then
+  ApplyTiles(black, 0, 0, [[
+oooooooooooooooooooo
+ooosoooooooooooooooo
+oooooooooooooosooooo
+osoooooooooooooooooo
+oooooooooooooooooooo
+ooooowwwwwwwwwwooooo
+ooooowwwwwwwwwwoosoo
+ooooowwwwwwwwwwooooo
+osooowwwwwwwwwwooooo
+ooooowwwwwwwwwwooooo
+oooooooooooooooooooo
+ooooooooooosoooooooo
+ooooosoooooooooosooo
+oosoooooosoooooooooo
+oooooooooooooooooooo
+]])
+else
   ApplyTiles(black, 0, 0, [[
 oooooooooooooooooooo
 ooosoooooooooooooooo
@@ -175,10 +194,31 @@ ooooosoooooooooosooo
 oosoooooosoooooooooo
 oooooooooooooooooooo
 ]])
+end
+
   Spawn("player", 10, 9)
 end
 
 function diamondroom(is_wet)
+if is_wet then
+  ApplyTiles(black, 0, 0, [[
+sooooooooooooooooooo
+oo.................o
+o..................o
+o..................o
+o..ooooooooooooooooo
+o..................o
+o..................o
+o..................o
+o..................o
+o..................o
+ooooooooooooooooowwo
+owwwwwwwwwwwwwwwwwwo
+owwwwwwwwwwwwwwwwwwo
+owwwwwwwwwwwwwwwwwoo
+ooooooooooooooooooos
+]])
+else
   ApplyTiles(black, 0, 0, [[
 sooooooooooooooooooo
 oo.................o
@@ -196,9 +236,10 @@ o..................o
 o.................oo
 ooooooooooooooooooos
 ]])
+end
   Spawn("player", 10, 9)
   Global("fan", 5.5, 13.5)
-  Spawn("lock", 16.5, 12.5)
+  Spawn("lock", 15.5, 12.5)
   Spawn("lock", 4.5, 2.5)
   Spawn("lock", 6.5, 2.5)
   Spawn("lock", 8.5, 2.5)
@@ -236,6 +277,25 @@ oooooooooooooooooooo
 end
 
 function keyroom()
+if is_wet then
+  ApplyTiles(cloud, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooowwwwwwwwwwwwwwooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+]])
+else
   ApplyTiles(cloud, 0, 0, [[
 oooooooooooooooooooo
 oooooooooooooooooooo
@@ -253,12 +313,32 @@ oooooooooooooooooooo
 oooooooooooooooooooo
 oooooooooooooooooooo
 ]])
+end
   Spawn("player", 10, 11)
   Spawn("key", 12.5, 11.5)
   Spawn("chest", 7.5, 11.5, "keyroom")
 end
 
 function green()
+if is_wet then
+  ApplyTiles(cloud, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooo>............<ooo
+ooowwwwwwwwwwwwwwooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+]])
+else
   ApplyTiles(cloud, 0, 0, [[
 oooooooooooooooooooo
 oooooooooooooooooooo
@@ -276,29 +356,50 @@ oooooooooooooooooooo
 oooooooooooooooooooo
 oooooooooooooooooooo
 ]])
+end
   Spawn("player", 10, 11)
 end
 
 function rubyroom()
+if is_wet then
   ApplyTiles(cloud, 0, 0, [[
-oooooooooooooooooooo
-oooooooooooooooooooo
-ooo>............<ooo
-ooo>............<ooo
-ooo>............<ooo
-ooo>....<oooo>..<ooo
-ooo>....<o>.....<ooo
-ooo>....<o>.....<ooo
-ooo>....<o>.....<ooo
-ooo>.<oooo>.....<ooo
-ooo>.<o>........<ooo
-ooo>.<o>........<ooo
-ooo>.<o>........<ooo
-oooooooooooooooooooo
+oooooooo>........<oo
+oooooooo>........<oo
+ooooo>....<oooo>.<oo
+ooooo>....<o>....<oo
+ooooo>....<o>....<oo
+ooooo>....<o>....<oo
+oo>....<oooo>.<ooooo
+oo>....<o>....<ooooo
+oo>....<o>....<ooooo
+oo>....<o>....<ooooo
+oo>.<oooo>.<oooooooo
+oo>.<o>....<oooooooo
+oo>.<o>....<oooooooo
+oowwwo>....<oooooooo
 oooooooooooooooooooo
 ]])
-  Spawn("player", 4.5, 12)
-  Spawn("ruby", 10.5, 11.5)
+else
+  ApplyTiles(cloud, 0, 0, [[
+oooooooo>........<oo
+oooooooo>........<oo
+ooooo>....<oooo>.<oo
+ooooo>....<o>....<oo
+ooooo>....<o>....<oo
+ooooo>....<o>....<oo
+oo>....<oooo>.<ooooo
+oo>....<o>....<ooooo
+oo>....<o>....<ooooo
+oo>....<o>....<ooooo
+oo>.<oooo>.<oooooooo
+oo>.<o>....<oooooooo
+oo>.<o>....<oooooooo
+oo>.<o>....<oooooooo
+oooooooooooooooooooo
+]])
+end
+  Spawn("player", 3.5, 13)
+  Spawn("ruby", 8, 12.5)
 end
 
 tiles = "tiles/clockwork"
