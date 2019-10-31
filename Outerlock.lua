@@ -50,12 +50,12 @@ oooo.............ooo
 oooo...........ooooo
 ooso...........ooooo
 oooo...........ososo
-oooooooooooooooooooo
+ooooooaaaooooooooooo
 oooooooooooooooosooo
 oooooooooooooooooooo
 ]])
   
-  Spawn("player", 6.5, 11)
+  Spawn("player", 11.5, 11)
   Spawn("chest", 12, 5.5, "nailbiter")
   Spawn("chest", 4.5, 4.5, "nailbiter")
 end
@@ -64,7 +64,7 @@ function nailbiter(iswet)
 if iswet then
   ApplyTiles(glitch, 0, 0, [[
 oooooooooooooooooooo
-o/............oo/..o
+o.............oo...o
 o.............oo...o
 o.............oo...o
 o.............oo...o
@@ -74,9 +74,9 @@ o..................o
 o..................o
 o-------------oooooo
 o.............oooooo
-o.............oosooo
+o.............ooaooo
 o.............oooooo
-o.............ooooso
+oaaaaaaaaaaaaaooooao
 ooooooo-------oooooo
 ]])
 else
@@ -92,9 +92,9 @@ o..................o
 o..................o
 o-------------oooooo
 o.............oooooo
-o.............oosooo
+o.............oo.ooo
 o.............oooooo
-o.............ooooso
+o.............oooo.o
 ooooooo-------oooooo
 ]])
 end
@@ -103,7 +103,7 @@ end
   Global("chest", 12, 4.5, "nailbiter")
   Spawn("box", 6.5, 13.5)
   Global("fan", 4.5, 13.5)
-  Spawn("lock", 15, 7.5)
+  Spawn("lock", 14.5, 7.5)
   Spawn("diamond", 17.5, 2.5)
 end
 
