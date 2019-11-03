@@ -75,7 +75,7 @@ xxxxxxxxxxxxxxxx|55|
 5555455568889TTT4555
 ]])
 
-  Spawn("player", 14, 12)
+  Spawn("player", 14, 13)
   Spawn("crystal", 3.5, 3.5)
 end
 
@@ -103,15 +103,14 @@ oooooooooooooooooooo
   Spawn("chest", 8.0, 10.5, "dungeon")
   
   Spawn("lock", 11, 4.5)
-  Global("lock", 12.5, 4.5)
-  Spawn("lock", 14, 4.5)
+  Global("lock", 13.25, 4.5)
   Spawn("lock", 15.5, 4.5)
   Spawn("diamond", 17.5, 4.5)
   
   Spawn("lock", 11, 9.5)
   Global("lock", 13.25, 9.5)
   Spawn("lock", 15.5, 9.5)
-  Global("key", 17.5, 10.5)
+  Global("fan", 17.5, 10.5)
   
   Spawn("record", 5.6, 10.5, "sounds/voices/v5r")
 
@@ -137,7 +136,6 @@ oooooooooooooooooooo
 ]])
 
   Spawn("player", 6.1, 9)
-  Global("fan", 10.2, 9.5)
   Global("chest", 14.3, 9.5, "dungeon")
 end
 
