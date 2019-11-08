@@ -20,25 +20,25 @@ oooooooooooooooooooo
 o..................o
 o..................o
 o..................o
-o---ooo---------...o
-o...o..............o
-o...o............ooo
-o...o..............o
-o...ooo............o
-o...o..............o
-o...o...........oooo
-o...o..............o
-o...oooo...........o
-o...o<<o...........o
-o...o>>ooooooooooooo
+o-----o-------...o.o
+o.....o..........o.o
+o.....o........ooo.o
+o.....o........o...o
+o.....oooo.....o...o
+o.....o........o.o.o
+o.....o...oooooo.o.o
+o.....o..........o.o
+o.....ooo........ooo
+o.....ooo........o<<
+o.....oooooooooooo>>
 ]])
   Spawn("ruby", 2.5, 2.5)
   Spawn("diamond", 5.5, 2.5)
-  Spawn("crystal", 14.5, 2.5)
-  Spawn("player", 10, 13)
-  Global("chest", 12, 13.5, "start")
-  Spawn("yield", 14, 13)
-  Spawn("yield", 16, 13)
+  Spawn("crystal", 12.5, 2.5)
+  Global("chest", 8, 11.5, "start")
+  Spawn("player", 11, 13)
+  Spawn("yield", 13, 13)
+  Spawn("yield", 15, 13)
 end
 
 -- glitch
@@ -102,17 +102,17 @@ oooooooooooooooooooo
 o..................o
 o..................o
 o..................o
-oooooooooooooooooooo
-oooosooooooooooooooo
-oooooooooooooooosooo
-oosoooooooosoooooooo
-oooooooosoooooooooso
+o...oooooooooooooooo
+o...osoooooooooooooo
+o...oooooooooooosooo
+ooooooooooosoooooooo
+oosooooosoooooooooso
 oooooooooooooooooooo
 ]])
-  Spawn("player", 15, 8)
-  Spawn("fan", 12.5, 8.5)
-  Spawn("generic", 10, 8.5)
+  Spawn("fan", 2.5, 11.5)
   Spawn("cauldron", 5, 8.5, "reject")
+  Spawn("generic", 10, 8.5)
+  Spawn("player", 15, 8)
 end
 
 -- Threadless
