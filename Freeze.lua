@@ -17,10 +17,10 @@ owwwwwwwwwwwwwwwwwwo
 owwwwwwwwwwwwwwwwwwo
 owwwwwwwwwwwwwwwwwwo
 o=wooooo=====ooooooo
-owwwww79wwwww79wwwwo
-o=wwww46wwwww46wwwwo
-owwwww13wwwww13wwwwo
-o=wwwwww=====wwooooo
+owwwwwwooowooowwwwwo
+o=wwww79wwwww79wwwwo
+owwwww46wwwww46wwwwo
+o=wwww13=====13ooooo
 owwwwwwwwwwwwwwwwwwo
 owwwwwwwwwwwwwwwwwwo
 owwoooooooooooooowwo
@@ -35,7 +35,7 @@ o..................o
 o..................o
 o..................o
 o-.ooooo-----ooooooo
-o..................o
+o......ooo.ooo.....o
 o-.................o
 o..................o
 o-....79-----79ooooo
