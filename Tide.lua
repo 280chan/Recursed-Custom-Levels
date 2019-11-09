@@ -24,8 +24,8 @@ owwwwwwwwwwwwwwwwwwo
 oooooooooooooooooooo
 ]])
 
-  Global("chest", 8, 12.5, "roomA")
-  Spawn("player", 10, 12)
+  Global("chest", 8, 13.5, "roomA")
+  Spawn("player", 10, 13)
 end
 
 function roomA(is_wet)
@@ -66,10 +66,10 @@ owwwwwwwwwwwwwwwwwwo
 oooooooooooooooooooo
 ]])
 end
-  Spawn("player", 10, 12)
+  Spawn("player", 10, 13)
   Spawn("crystal", 17.5, 2.5)
-  Spawn("generic", 6, 12.5)
-  Spawn("yield", 14, 12)
+  Spawn("generic", 6, 13.5)
+  Spawn("yield", 14, 13)
 end
 
 function glitch()
