@@ -31,15 +31,15 @@ end
 
 function goal()
     ApplyTiles(outrun, 0, 0, [[
-xxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxx......|
 |...........|......|
 |...........|......|
-|---------o.|......|
-|xxxxxo...|.|.oxxxx|
+|---------o.|.oxxxx|
+|xxxxxo...|.|-.....|
 |.....|...|.|......|
-|.....|...|.|......|
-|.....|o..|.|-.....|
-9...o.|...|.|....o-o
+|.....|...|.|----..|
+|.....|o..|.|......|
+9...o.|...|.|o...o-o
 6...|.|...|.|....|..
 6...|.o..o|.|....o..
 6...|.....|.o.....-o
@@ -54,7 +54,9 @@ xxxxxxxxxxxxxxxxxxxx
   Spawn("box", 8.5, 12.5)
   Spawn("lock", 17.5, 12.5)
   Spawn("chest", 19.5, 13.5, "empty")
-  Spawn("crystal", 17.5, 2.5)
+  Spawn("key", 13.5, 7.5)
+  Spawn("lock", 15.5, 1.5)
+  Spawn("crystal", 17.5, 1.5)
 end
 
 function empty()
