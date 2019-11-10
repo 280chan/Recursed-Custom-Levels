@@ -34,7 +34,7 @@ o.....ooooooooooo<>o
 ]])
   Spawn("ruby", 2.5, 2.5)
   Spawn("diamond", 5.5, 2.5)
-  Global("lock", 7.5, 1.5)
+  Spawn("lock", 7.5, 1.5)
   Spawn("crystal", 10.5, 2.5)
   Global("chest", 8, 11.5, "start")
   Spawn("player", 11, 13)
