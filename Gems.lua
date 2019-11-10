@@ -16,25 +16,26 @@ local cloud = { ["<"] = "cloud_l", o = "cloud", [">"] = "cloud_r", ["-"] = "clou
 				
 function start()
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
+ooooooo.oooooooooooo
 o..................o
 o..................o
 o..................o
-o-----o-------...o.o
-o.....o..........o.o
-o.....o........ooo.o
-o.....o........o...o
-o.....oooo.....o...o
-o.....o........o.o.o
-o.....o...oooooo.o.o
-o.....o..........o.o
-o.....ooo........ooo
-o.....ooo........o<<
-o.....oooooooooooo>>
+o-----o-----....o..o
+o.....o.........o..o
+o.....o......oooo..o
+o.....o......o.....o
+o.....oooo...o.....o
+o.....o......o..o..o
+o.....o...oooo..o..o
+o.....o.........o..o
+o.....ooo.......oooo
+o.....ooo.......o<>o
+o.....ooooooooooo<>o
 ]])
   Spawn("ruby", 2.5, 2.5)
   Spawn("diamond", 5.5, 2.5)
-  Spawn("crystal", 12.5, 2.5)
+  Global("lock", 7.5, 1.5)
+  Spawn("crystal", 10.5, 2.5)
   Global("chest", 8, 11.5, "start")
   Spawn("player", 11, 13)
   Spawn("yield", 13, 13)
@@ -73,22 +74,22 @@ oooooooooooooooooooo
 oooosooooooooosooooo
 oooooooosooooooooooo
 oosoooooooosoooooooo
-oooooosooooooosooooo
+osoooosooooooosooooo
 oooooooooooooooooooo
 o..................o
 o..................o
 o..................o
 oooooooooooooooooooo
-oooooooooooooooooooo
+ooooosoooooooooooooo
 oooooooooooooooosooo
 ooooooooooosoooooooo
-oooooooosooooooooooo
+oosooooosoooooooooso
 oooooooooooooooooooo
 ]])
-  Spawn("player", 5, 8)
-  Spawn("generic", 10, 8.5)
-  Global("cauldron", 15, 8.5, "rejecttwo")
-  
+  Spawn("cauldron", 4, 8.5, "rejecttwo")
+  Spawn("chest", 8, 8.5, "climb")
+  Spawn("chest", 12, 8.5, "keyroom")
+  Spawn("player", 16, 8)
 end
 
 function rejecttwo()
@@ -97,22 +98,107 @@ oooooooooooooooooooo
 oooosooooooooosooooo
 oooooooosooooooooooo
 oosoooooooosoooooooo
-osoooosooooooosooooo
+oooooosooooooosooooo
 oooooooooooooooooooo
 o..................o
 o..................o
 o..................o
-o...oooooooooooooooo
-o...osoooooooooooooo
-o...oooooooooooosooo
+oooooooooooooooowwwo
+oooooooooooooooowwwo
+oooooooooooooooowwwo
 ooooooooooosoooooooo
-oosooooosoooooooooso
+oooooooosooooooooooo
 oooooooooooooooooooo
 ]])
-  Spawn("fan", 2.5, 11.5)
-  Spawn("cauldron", 5, 8.5, "reject")
-  Spawn("generic", 10, 8.5)
-  Spawn("player", 15, 8)
+  Spawn("player", 3, 8)
+  Spawn("generic", 6, 8.5)
+  Spawn("generic", 9, 8.5)
+  Spawn("generic", 12, 8.5)
+  Global("cauldron", 15, 8.5, "reject")
+end
+
+function climb(is_wet)
+if is_wet then
+  ApplyTiles(black, 0, 0, [[
+ooooosoooooooooooooo
+oooooooooooooooooooo
+................oooo
+................oooo
+................oooo
+oooo............ooso
+oooo............oooo
+oooo............oooo
+ooso----........oooo
+oooo............oooo
+oooo............oooo
+oooo----oooowwwwoooo
+oooo....oooowwwwoooo
+osoo....oosowwwwoooo
+oooo....oooooooooooo
+]])
+else
+  ApplyTiles(black, 0, 0, [[
+ooooosoooooooooooooo
+oooooooooooooooooooo
+................oooo
+................oooo
+................oooo
+oooo............ooso
+oooo............oooo
+oooo............oooo
+ooso----........oooo
+oooo............oooo
+oooo............oooo
+oooo----oooo....oooo
+oooo....oooowwwwoooo
+osoo....oosowwwwoooo
+oooo....oooooooooooo
+]])
+end
+  Spawn("player", 2, 4)
+  Spawn("fan", 14, 13.5)
+end
+
+function keyroom(is_wet)
+if is_wet then
+  ApplyTiles(black, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooooo.......o......o
+oosoo.......o......o
+ooooo.......o......o
+ooooo...o...o...oooo
+ooooo...o...o...osoo
+oosoo...o...o...oooo
+ooooo...o...o...oooo
+ooooo...o...o...oooo
+oowwwwwwowwwwwwwoooo
+oowwwwwwowwwwwwwosoo
+oowwwwwwowwwwwwwoooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+]])
+else
+  ApplyTiles(black, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooooo.......o......o
+oosoo.......o......o
+ooooo.......o......o
+ooooo...o...o...oooo
+ooooo...o...o...osoo
+oosoo...o...o...oooo
+ooooo...o...o...oooo
+ooooo...o...o...oooo
+oo......o.......oooo
+oo......o.......osoo
+oo......o.......oooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+]])
+end
+  Spawn("player", 3.5, 12)
+  Global("key", 17.5, 4.5)
 end
 
 -- Threadless
