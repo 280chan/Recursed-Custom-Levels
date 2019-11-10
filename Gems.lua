@@ -20,26 +20,26 @@ ooooooo.oooooooooooo
 o..................o
 o..................o
 o..................o
-o-----o-----....o..o
-o.....o.........o..o
-o.....o......oooo..o
-o.....o......o.....o
-o.....oooo...o.....o
-o.....o......o..o..o
-o.....o...oooo..o..o
-o.....o.........o..o
-o.....ooo.......oooo
-o.....ooo.......o<>o
-o.....ooooooooooo<>o
+o---o--------...o..o
+o...o...........o..o
+o...o........oooo..o
+o...o........o.....o
+o...oooo.....o.....o
+o...o........o..o..o
+o...o...oooooo..o..o
+o...o...........o..o
+o...ooo.........oooo
+o...ooo.........o<>o
+o...ooooooooooooo<>o
 ]])
   Spawn("ruby", 2.5, 2.5)
   Spawn("diamond", 5.5, 2.5)
   Spawn("lock", 7.5, 1.5)
-  Spawn("crystal", 10.5, 2.5)
-  Global("chest", 8, 11.5, "start")
-  Spawn("player", 11, 13)
-  Spawn("yield", 13, 13)
-  Spawn("yield", 15, 13)
+  Spawn("crystal", 11.5, 2.5)
+  Global("chest", 6, 11.5, "start")
+  Spawn("player", 9.5, 13)
+  Spawn("yield", 11.5, 13)
+  Spawn("yield", 13.5, 13)
 end
 
 -- glitch
@@ -125,16 +125,16 @@ oooooooooooooooooooo
 ................oooo
 ................oooo
 ................oooo
-oooo............ooso
-oooo............oooo
-oooo............oooo
-ooso----........oooo
-oooo............oooo
-oooo............oooo
-oooo----oooowwwwoooo
-oooo....oooowwwwoooo
-osoo....oosowwwwoooo
-oooo....oooooooooooo
+----............ooso
+................oooo
+................oooo
+....----........oooo
+................oooo
+................oooo
+--------oooowwwwoooo
+........oooowwwwoooo
+........oosowwwwoooo
+........oooooooooooo
 ]])
 else
   ApplyTiles(black, 0, 0, [[
@@ -143,19 +143,19 @@ oooooooooooooooooooo
 ................oooo
 ................oooo
 ................oooo
-oooo............ooso
-oooo............oooo
-oooo............oooo
-ooso----........oooo
-oooo............oooo
-oooo............oooo
-oooo----oooo....oooo
-oooo....oooowwwwoooo
-osoo....oosowwwwoooo
-oooo....oooooooooooo
+----............ooso
+................oooo
+................oooo
+....----........oooo
+................oooo
+................oooo
+--------oooo....oooo
+........oooowwwwoooo
+........oosowwwwoooo
+........oooooooooooo
 ]])
 end
-  Spawn("player", 2, 4)
+  Spawn("player", 0.5, 3)
   Spawn("fan", 14, 13.5)
 end
 
