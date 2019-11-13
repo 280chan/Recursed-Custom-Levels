@@ -79,9 +79,9 @@ oooooooooooooooooooo
 o..................o
 o..................o
 o..................o
-oooooooooooooooooooo
-ooooosoooooooooooooo
-oooooooooooooooosooo
+oooooooooooooooo---o
+ooooosoooooooo.....o
+oooooooooooooo....-o
 ooooooooooosoooooooo
 oosooooosoooooooooso
 oooooooooooooooooooo
@@ -89,7 +89,9 @@ oooooooooooooooooooo
   Spawn("cauldron", 4, 8.5, "rejecttwo")
   Spawn("chest", 8, 8.5, "climb")
   Spawn("chest", 12, 8.5, "keyroom")
-  Spawn("player", 16, 8)
+  Global("key", 15, 11.5)
+  Spawn("player", 16, 11)
+  Spawn("lock", 18.4, 10.5)
 end
 
 function rejecttwo()
