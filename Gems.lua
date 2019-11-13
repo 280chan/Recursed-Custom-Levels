@@ -198,7 +198,7 @@ oooooooooooooooooooo
 ]])
 end
   Spawn("player", 3.5, 12)
-  Global("key", 17.5, 4.5)
+  Spawn("key", 17.5, 4.5)
 end
 
 -- Threadless
