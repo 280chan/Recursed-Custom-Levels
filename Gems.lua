@@ -16,6 +16,29 @@ local cloud = { ["<"] = "cloud_l", o = "cloud", [">"] = "cloud_r", ["-"] = "clou
 				
 function start()
 ApplyTiles(metal, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooo............oooo
+oooo............oooo
+oooo............oooo
+oooo...o....o...oooo
+oooo...o....o...oooo
+oooo...oooooo...oooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+]])
+  Spawn("chest", 5.5, 10.5, "main")
+  Global("generic", 14.5, 10.5)
+  Spawn("player", 10, 9)
+end
+
+function main()
+ApplyTiles(metal, 0, 0, [[
 ooooooo.oooooooooooo
 o..................o
 o..................o
@@ -36,7 +59,6 @@ o...ooooooooooooo<>o
   Spawn("diamond", 5.5, 2.5)
   Spawn("lock", 7.5, 1.5)
   Spawn("crystal", 11.5, 2.5)
-  Global("chest", 6, 11.5, "start")
   Spawn("player", 9.5, 13)
   Spawn("yield", 11.5, 13)
   Spawn("yield", 13.5, 13)
@@ -226,7 +248,7 @@ oooooooooooooo>.<ooo
   Spawn("player", 15.5, 12)
   Spawn("chest", 11.5, 6.5, "empty")
   Spawn("chest", 8.5, 6.5, "empty")
-  Global("chest", 14.5, 6.5, "start")
+  Global("chest", 14.5, 6.5, "main")
   Global("generic", 10, 9.5)
 end
 
