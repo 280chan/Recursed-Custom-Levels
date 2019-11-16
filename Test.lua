@@ -31,7 +31,8 @@ ApplyTiles(metal, 0, 0, [[
 
   Spawn("player", 10, 12)
   Spawn("chest", 4, 9, "roomA")
-  Global("generic", 16, 9);
+  Global("generic", 16, 9)
+  Global("key", 10, 9)
 end
 
 function roomA(is_wet)
