@@ -87,8 +87,8 @@ oosooooosoooooooooso
 oooooooooooooooooooo
 ]])
   Spawn("cauldron", 4, 8.5, "rejecttwo")
-  Spawn("generic", 8, 8.5)
-  Spawn("generic", 12, 8.5)
+  Spawn("chest", 8, 8.5, "climb")
+  Spawn("chest", 12, 8.5, "keyroom")
   Spawn("player", 17, 11)
   Spawn("lock", 18.4, 10.5)
   Global("key", 18.4, 6.5)
@@ -113,10 +113,8 @@ oooooooosooooooooooo
 oooooooooooooooooooo
 ]])
   Spawn("player", 3, 8)
-  Spawn("chest", 6, 8.5, "climb")
-  Global("cauldron", 9, 8.5, "reject")
-  Spawn("chest", 12, 8.5, "keyroom")
-  Spawn("cauldron", 15, 8.5, "rejecttwo")
+  Spawn("generic", 9, 8.5)
+  Global("cauldron", 15, 8.5, "reject")
 end
 
 function climb(is_wet)
