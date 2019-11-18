@@ -18,16 +18,16 @@ owo......79o.......o
 ooo......46o.......o
 owwwwww-o46oooo..o.o
 owwwwwwww13wwowwwowo
-oo-wwwwwwwwwwowwwowo
+oo--wwwwwwwwwowwwowo
 owwwwwwoowwowowooowo
 owwwwwww79wowwwo79wo
 ooowwwww46wowwwo46wo
 owwwwwww46wowwwo46wo
 owwwwwwo13wooooo13wo
-owwwwwwwwwwo79wwwwwo
-owwwwowwwwwo46wwwwwo
-owwwwo-----o46wwwwwo
-oooooooooooo13oooooo
+owwwwwwowwwo79wwwwwo
+ooowwwwowwwo46wwwwwo
+..owwwwowwwo46wwwwwo
+..oooooooooo13oooooo
 ]])
   Spawn("yield", 17, 13)
 else
@@ -37,24 +37,24 @@ owo........o.......o
 ooo........o.......o
 o......-o..oooo..o.o
 o............o...o.o
-oo-..........o...o.o
+oo--.........o...o.o
 o......oo79o.o.ooo.o
 o........46o...o...o
 ooo......46o...o...o
 o........13o...o...o
 o......o79.ooooo79.o
-o.......46.o....46.o
-o....oww46wo....46.o
-o....o--13-owwww13wo
-oooooooooooo79oooooo
+o......o46.o....46.o
+ooo....o46.o....46.o
+..o....o13wowwww13wo
+..oooooooooo79oooooo
 ]])
   Spawn("crystal", 13.5, 12.5)
 end
   Spawn("player", 4, 13)
   Spawn("yield", 13.5, 2)
   Spawn("yield", 13.5, 9)
-  Global("key", 3, 13.5)
-  Global("chest", 2, 13.5, "start")
+  Global("key", 6, 13.5)
+  Global("chest", 2, 11.5, "start")
   Global("lock", 10, 4.5)
   Spawn("lock", 15.5, 12.5)
 end
