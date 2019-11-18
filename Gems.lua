@@ -164,17 +164,17 @@ if is_wet then
   ApplyTiles(black, 0, 0, [[
 oooooooooooooooooooo
 oooooooooooooooooooo
-ooooo.......o......o
-oosoo.......o......o
-ooooo.......o......o
-ooooo...o...o...oooo
-ooooo...o...o...osoo
-oosoo...o...o...oooo
-ooooo...o...o...oooo
-ooooo...o...o...oooo
-oowwwwwwowwwwwwwoooo
-oowwwwwwowwwwwwwosoo
-oowwwwwwowwwwwwwoooo
+oooo.......o.......o
+osoo.......o.......o
+oooo.......o.......o
+oooo...o...o...o---o
+oooo...o...o...o...o
+osoo...o...o...ooooo
+oooo...o...o...oosoo
+oooo...o...o...ooooo
+owwwwwwowwwwwwwowwwo
+owwwwwwowwwwwwwowwwo
+owwwwwwowwwwwwwowwwo
 oooooooooooooooooooo
 oooooooooooooooooooo
 ]])
@@ -182,23 +182,24 @@ else
   ApplyTiles(black, 0, 0, [[
 oooooooooooooooooooo
 oooooooooooooooooooo
-ooooo.......o......o
-oosoo.......o......o
-ooooo.......o......o
-ooooo...o...o...oooo
-ooooo...o...o...osoo
-oosoo...o...o...oooo
-ooooo...o...o...oooo
-ooooo...o...o...oooo
-oo......o.......oooo
-oo......o.......osoo
-oo......o.......oooo
+oooo.......o.......o
+osoo.......o.......o
+oooo.......o.......o
+oooo...o...o...o---o
+oooo...o...o...o...o
+osoo...o...o...ooooo
+oooo...o...o...oosoo
+oooo...o...o...ooooo
+o......o.......o...o
+o......o.......o...o
+o......o.......o...o
 oooooooooooooooooooo
 oooooooooooooooooooo
 ]])
 end
-  Spawn("player", 3.5, 12)
-  Spawn("key", 17.5, 4.5)
+  Spawn("player", 2.5, 12)
+  Spawn("key", 17.5, 6.5)
+  Spawn("generic", 17.5, 12.5)
 end
 
 -- Threadless
