@@ -13,31 +13,8 @@ local crazy = { o = "glitch", z = "cloud", ["#"] = "wetbox", ["?"] = "girder",
 local cloud = { ["<"] = "cloud_l", o = "cloud", [">"] = "cloud_r", ["-"] = "cloudledge", w = "water" }
 				
 -- main
-				
-function start()
-ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooo............oooo
-oooo............oooo
-oooo............oooo
-oooo...o....o...oooo
-oooo...o....o...oooo
-oooo...oooooo...oooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-]])
-  Spawn("chest", 5.5, 10.5, "main")
-  Global("generic", 14.5, 10.5)
-  Spawn("player", 10, 9)
-end
 
-function main()
+function start()
 ApplyTiles(metal, 0, 0, [[
 ooooooo.oooooooooooo
 o..................o
@@ -47,7 +24,7 @@ o---o--------...o..o
 o...o...........o..o
 o...o........oooo..o
 o...o........o.....o
-o...oooo.....o.....o
+o...ooooo....o.....o
 o...o........o..o..o
 o...o...oooooo..o..o
 o...o...........o..o
@@ -55,6 +32,7 @@ o...ooo.........oooo
 o...ooo.........o<>o
 o...ooooooooooooo<>o
 ]])
+  Global("chest", 6, 11.5, "start")
   Spawn("ruby", 2.5, 2.5)
   Spawn("diamond", 5.5, 2.5)
   Spawn("lock", 7.5, 1.5)
