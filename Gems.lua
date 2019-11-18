@@ -225,7 +225,6 @@ oooooooooooooo>.<ooo
 ]])
   Spawn("player", 15.5, 12)
   Spawn("chest", 11.5, 6.5, "empty")
-  Spawn("chest", 8.5, 6.5, "empty")
   Global("chest", 14.5, 6.5, "start")
   Global("generic", 10, 9.5)
 end
@@ -249,6 +248,7 @@ oooooooooooooooooooo
 oooooooooooooooooooo
 ]])
   Spawn("player", 5.5, 9)
+  Spawn("yield", 14.5, 9)
 end
 
 tiles = "tiles/clockwork"
