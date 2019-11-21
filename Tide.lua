@@ -1,75 +1,169 @@
 local metal = { o = "box", ["="] = "girder_h", ["|"] = "girder_v",
-                w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge" }
+                w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge", 
+				["7"] = "buoyul", ["8"] = "buoyu", ["9"] = "buoyur",
+				["4"] = "buoyl", ["5"] = "buoyc", ["6"] = "buoyr",
+				["1"] = "buoydl", ["2"] = "buoyd", ["3"] = "buoydr"}
 local black = { o = "glitch", s = "glitchd", ["-"] = "glitchledge", a = "acid" }
 local crazy = { o = "glitch", z = "block_ul", ["#"] = "ceil", ["?"] = "pillar",
                 ["1"] = "char0", ["2"] = "char2", ["3"] = "char3",
                 ["4"] = "block", ["5"] = "box" }
 
-function start(is_wet)
+function start()
 ApplyTiles(metal, 0, 0, [[
 oooooooooooooooooooo
 o..................o
 o..................o
 o..................o
-o...............oooo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwooooo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwoooooo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
+o..................o
+o..................o
+o..................o
+o..................o
+owwwoooooooooooowwwo
+owwwoooooooooooowwwo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
 oooooooooooooooooooo
 ]])
 
-  Global("chest", 8, 13.5, "roomA")
+  Spawn("chest", 2.5, 9.5, "roomA")
+  Spawn("player", 7.5, 7)
+  Spawn("box", 12.5, 7.5)
+  Spawn("chest", 17.5, 9.5, "store")
+end
+
+function store(is_wet)
+if is_wet then
+ApplyTiles(metal, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooooooo788889ooooooo
+ooooooo4....6ooooooo
+ooooooo4....6ooooooo
+ooooooo4....6ooooooo
+ooooooo4....6ooooooo
+ooooooo122223ooooooo
+ooooooowwwwwwooooooo
+ooooooowwwwwwooooooo
+ooooooowwwwwwooooooo
+ooooooowwwwwwooooooo
+ooooooowwwwwwooooooo
+ooooooowwwwwwooooooo
+ooooooo------ooooooo
+]])
+  Spawn("player", 10, 6)
+else
+ApplyTiles(metal, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooooooo......ooooooo
+ooooooo......ooooooo
+ooooooo......ooooooo
+ooooooo......ooooooo
+ooooooo......ooooooo
+ooooooo......ooooooo
+ooooooo......ooooooo
+ooooooo......ooooooo
+ooooooo......ooooooo
+ooooooo788889ooooooo
+ooooooo4....6ooooooo
+ooooooo4....6ooooooo
+ooooooo4----6ooooooo
+]])
   Spawn("player", 10, 13)
+end
+  Global("generic", 8.5, 6.5)
+  Global("generic", 11.5, 6.5)
 end
 
 function roomA(is_wet)
 if is_wet then
   ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
+ooooo.....oooooooooo
+o...o..............o
+o...o..............o
+o......o...........o
+o......oo..........o
+o......ooo.........o
+ooooooooooo........o
+789.......o........o
+456.......oooo.....o
+456wwwo.........789o
+456wwwowwwwwwwww456o
+123wwwowwwwwwwww456o
+wwwwwwo---------123o
+wwwwwwowwwwwwwwwwwwo
+ooooooowwwwwwwwwwwoo
+]])
+  Spawn("generic", 1.5, 13.5)
+else
+	ApplyTiles(metal, 0, 0, [[
+ooooo.....oooooooooo
+o...o..............o
+o...o..............o
+o......o...........o
+o......oo..........o
+o......ooo.........o
+ooooooooooo........o
+..........o........o
+..........oooo.....o
+789...o............o
+456...o.........789o
+456...o.........456o
+456...o---------456o
+123...o.........123o
+ooooooo...........oo
+]])
+end
+  Spawn("crystal", 2.5, 2.5)
+  Spawn("player", 3.6, 13)
+  Spawn("yield", 5.4, 13)
+  Spawn("lock", 4.5, 4.5)
+  Spawn("lock", 7.5, 1.5)
+  Spawn("chest", 12.5, 7.5, "keyroom")
+end
+
+function keyroom(is_wet)
+if is_wet then
+  ApplyTiles(metal, 0, 0, [[
+o.................oo
 o..................o
-o..................o
-o..................o
-o...............oooo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwooooo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwoooooo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
+ooo................o
+oo.................o
+oo...............ooo
+oo;:.............ooo
+oooo.............ooo
+oooo...........;.ooo
+oooo...........ooooo
+oooo;:,........ooooo
+ooooooowwwwwwwwooooo
+ooooooowwwwwwwwooooo
+ooooooowwwwwwooooooo
+ooooooowwwwwwooooooo
 oooooooooooooooooooo
 ]])
 else
 	ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
+o.................oo
 o..................o
-o..................o
-o..................o
-o...............oooo
-o..................o
-o..................o
-o..............ooooo
-o..................o
-o..................o
-owwwwwwwwwwwwwoooooo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
+ooo................o
+oo.................o
+oo...............ooo
+oo...............ooo
+oooo.............ooo
+oooo.............ooo
+oooo...........ooooo
+oooo...........ooooo
+ooooooo........ooooo
+ooooooo........ooooo
+ooooooo.....oooooooo
+ooooooo.....oooooooo
 oooooooooooooooooooo
 ]])
 end
-  Spawn("player", 10, 13)
-  Spawn("crystal", 17.5, 2.5)
-  Spawn("generic", 6, 13.5)
-  Spawn("yield", 14, 13)
+  Spawn("player", 8.5, 13)
+  Spawn("key", 2, 1.5)
 end
 
 function glitch()
@@ -123,8 +217,6 @@ o..ooooooooooosooooo
   Spawn("lock", 11.5, 2.5)
   Spawn("diamond", 16.5, 2.5)
 end
-
-
 
 tiles = "tiles/outrun"
 pattern = "backgrounds/void"
