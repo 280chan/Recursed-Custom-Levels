@@ -1,0 +1,8 @@
+
+To play custom levels for the puzzle game Recursed, you need to do:
+
+1. Move all the level files into directory below
+
+\Recursed\custom\missions\
+
+2. Restart the game if the game is currently running. The levels are inside Start - Nexus - Custom.
