@@ -212,7 +212,6 @@ o..ooooooooooosooooo
   Global("lock", 11.5, 9.5)
   Spawn("lock", 13, 9.5)
   Spawn("lock", 14.5, 9.5)
-  Global("generic", 17, 10.5)
   Spawn("generic", 7.5, 3.5)
   Spawn("lock", 11.5, 2.5)
   Spawn("diamond", 16.5, 2.5)
