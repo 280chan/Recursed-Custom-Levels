@@ -1,5 +1,7 @@
-local metal = { o = "box", ["="] = "girder_h", ["|"] = "girder_v",
+local metal = { o = "box", x = "ceil", ["|"] = "pillar",
                 w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge", 
+				["h"] = "block_ul", ["j"] = "block_u", ["k"] = "block_ur",
+                ["b"] = "block_l", ["n"] = "block", ["m"] = "block_r",
 				["7"] = "buoyul", ["8"] = "buoyu", ["9"] = "buoyur",
 				["4"] = "buoyl", ["5"] = "buoyc", ["6"] = "buoyr",
 				["1"] = "buoydl", ["2"] = "buoyd", ["3"] = "buoydr"}
@@ -10,21 +12,21 @@ local crazy = { o = "glitch", z = "block_ul", ["#"] = "ceil", ["?"] = "pillar",
 
 function start()
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-o..................o
-o..................o
-o..................o
-o..................o
-o..................o
-o..................o
-o..................o
-owwwoooooooooooowwwo
-owwwoooooooooooowwwo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
+xxxxxxxxxxxxxxxxxxxx
+|..................|
+|..................|
+|..................|
+|..................|
+|..................|
+|..................|
+|..................|
+|wwwhjjjjjjjjjjkwww|
+|wwwbnnnnnnnnnnmwww|
+jjjjjjjknnnnhjjjjjjj
+nnnnnnnmnnnnbnnnnnnn
+nnnnnnnmnnnnbnnnnnnn
+nnnnnnnmnnnnbnnnnnnn
+nnnnnnnmxxxxbnnnnnnn
 ]])
 
   Spawn("chest", 2.5, 9.5, "roomA")
@@ -36,40 +38,40 @@ end
 function store(is_wet)
 if is_wet then
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-oooooooooooooooooooo
-ooooooo788889ooooooo
-ooooooo4....6ooooooo
-ooooooo4....6ooooooo
-ooooooo4....6ooooooo
-ooooooo4....6ooooooo
-ooooooo122223ooooooo
-ooooooowwwwwwooooooo
-ooooooowwwwwwooooooo
-ooooooowwwwwwooooooo
-ooooooowwwwwwooooooo
-ooooooowwwwwwooooooo
-ooooooowwwwwwooooooo
-ooooooo------ooooooo
+jjjjjjknnnnnnhjjjjjj
+xxxonnmxxxxxxbnnoxxx
+889|nnm788889bnn|788
+..6|nnm4....6bnn|4..
+..6|nnm4....6bnn|4..
+..6|nnm4....6bnn|4..
+..6|nnm4....6bnn|4..
+223|nnm122223bnn|122
+www|nnmwwwwwwbnn|www
+www|nnmwwwwwwbnn|www
+www|nnmwwwwwwbnn|www
+www|nnmwwwwwwbnn|www
+www|nnmwwwwwwbnn|www
+www|nnmwwwwwwbnn|www
+www|nnm------bnn|www
 ]])
   Spawn("player", 10, 6)
 else
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-oooooooooooooooooooo
-ooooooo......ooooooo
-ooooooo......ooooooo
-ooooooo......ooooooo
-ooooooo......ooooooo
-ooooooo......ooooooo
-ooooooo......ooooooo
-ooooooo......ooooooo
-ooooooo......ooooooo
-ooooooo......ooooooo
-ooooooo788889ooooooo
-ooooooo4....6ooooooo
-ooooooo4....6ooooooo
-ooooooo4----6ooooooo
+jjjjjjknnnnnnhjjjjjj
+xxxonnmxxxxxxbnnoxxx
+...|nnm......bnn|...
+...|nnm......bnn|...
+...|nnm......bnn|...
+...|nnm......bnn|...
+...|nnm......bnn|...
+...|nnm......bnn|...
+...|nnm......bnn|...
+...|nnm......bnn|...
+...|nnm......bnn|...
+889|nnm788889bnn|788
+..6|nnm4....6bnn|4..
+..6|nnm4....6bnn|4..
+..6|nnm4----6bnn|4..
 ]])
   Spawn("player", 10, 13)
 end
@@ -80,40 +82,40 @@ end
 function roomA(is_wet)
 if is_wet then
   ApplyTiles(metal, 0, 0, [[
-ooooo.....oooooooooo
-o...o..............o
-o...o..............o
-o......o...........o
-o......oo..........o
-o......ooo.........o
-ooooooooooo........o
-789.......o........o
-456.......oooo.....o
-456wwwo.........789o
-456wwwowwwwwwwww456o
-123wwwowwwwwwwww456o
-wwwwwwo---------123o
-wwwwwwowwwwwwwwwwwwo
-ooooooowwwwwwwwwwwoo
+xxxxo.....oxxxxxxxxx
+|...|..............|
+|...o..............|
+|......o...........|
+|......|o..........|
+|......|oo.........|
+oxxxxxxxxxo........|
+789.......|........|
+456.......oxxo.....|
+456wwwo.........789|
+456www|wwwwwwwww456|
+123www|wwwwwwwww456|
+wwwwww|---------123|
+wwwwww|wwwwwwwwwwww|
+xxxxxxowwwwwwwwwwwo|
 ]])
   Spawn("generic", 1.5, 13.5)
 else
 	ApplyTiles(metal, 0, 0, [[
-ooooo.....oooooooooo
-o...o..............o
-o...o..............o
-o......o...........o
-o......oo..........o
-o......ooo.........o
-ooooooooooo........o
-..........o........o
-..........oooo.....o
-789...o............o
-456...o.........789o
-456...o.........456o
-456...o---------456o
-123...o.........123o
-ooooooo...........oo
+xxxxo.....oxxxxxxxxx
+|...|..............|
+|...o..............|
+|......o...........|
+|......|o..........|
+|......|oo.........|
+oxxxxxxxxxo........|
+..........|........|
+..........oxxo.....|
+789...o............|
+456...|.........789|
+456...|.........456|
+456...|---------456|
+123...|.........123|
+xxxxxxo...........o|
 ]])
 end
   Spawn("crystal", 2.5, 2.5)
