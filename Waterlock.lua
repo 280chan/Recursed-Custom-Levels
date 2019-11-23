@@ -1,39 +1,58 @@
-local villa = { o = "stone", t = "stonetop", ["8"] = "stucco",
-                ["7"] = "arch_l", ["9"] = "arch_r", ["1"] = "stonebottom_l", ["3"] = "stonebottom_r",
-                ["|"] = "pillar",  ["T"] = "pillartop", ["/"] = "grasspillar",
-                [">"] = "shadowtop_l", ["}"] = "shadow_l", ["<"] = "shadowtop_r", ["{"] = "shadow_r",
-                ["x"] = "ivy_a", ["X"] = "ivy_b", ["+"] = "ivy_c",
+local villa = { o = "stone", t = "stonetop", ["|"] = "pillar", ["T"] = "pillartop",
+				["7"] = "buoyul", ["8"] = "buoyu", ["9"] = "buoyur", w = "water",
+                ["4"] = "buoyl", ["5"] = "buoyc", ["6"] = "buoyr", ["^"] = "watersurface",
+                ["1"] = "buoydl", ["2"] = "buoyd", ["3"] = "buoydr",
+                [">"] = "shadowtop_l", ["}"] = "shadow_l", ["<"] = "shadowtop_r",
+                ["x"] = "ivy_a", ["X"] = "ivy_b", ["+"] = "ivy_c", ["{"] = "shadow_r",
                 ["$"] = "hang_a", ["%"] = "hang_b", ["&"] = "hang_c",
-                ["#"] = "bush_a", ["@"] = "bush_a",
+                ["#"] = "bush_a", ["@"] = "bush_a", ["/"] = "grasspillar",
                 [","] = "grass_a", [":"] = "grass_b", [";"] = "grass_c", ["-"] = "ledge" }
 
 local glitch = { o = "glitch", ["/"] = "glitchd", s = "glitchsymbol", ["-"] = "glitchledge", a = "acid" }
 
-function start()
-  ApplyTiles(villa, 0, 0, [[
-|.................x/
-|................../
-ttt................/
-oo.................|
-oo...............ttt
-oo;:.............ooo
-ooox.............ooo
-ooXX.........:,;.ooo
-ooxx.........#@%tt>o
-oooX;:,......@$xXo}o
-$%&%&%@......#@%@%}o
-xXXXxX#..........#}o
-x+x+Xx&..........&}o
-xXXXxX#.......:,;#}o
-x+x+Xx&------$X+Xxtt
+function start(is_wet)
+if is_wet then
+    ApplyTiles(villa, 0, 0, [[
+oooooooooooooooooooo
+o...............789o
+o...............456o
+o...............456o
+o...............456o
+o......o.....o..456o
+o......o^^^^^o..456o
+o.oooooooowooooo456o
+o...o.......789o456o
+o...o.......456o456o
+o-..o..o....456o123o
+o......ooooo456wwwwo
+o......o...o456wwwwo
+oooooooo...o456wwwwo
+...........o456ooooo
 ]])
-
-  Spawn("player", 5, 9)
-  Global("chest", 6, 9.5, "start")
-  Global("key", 2, 1.5)
-  Spawn("lock", 13.5, 12.5)
-  Spawn("crystal", 15.5, 12.5)
-  
+  Spawn("crystal", 17.5, 12.5)
+else
+    ApplyTiles(villa, 0, 0, [[
+oooooooooooooooooooo
+o..................o
+o..................o
+o..................o
+o...............789o
+o......o.....o..456o
+o......o.....o..456o
+o.oooooooo^ooooo456o
+o...o..........o456o
+o...o..........o456o
+o-..o..o.......o456o
+o......ooooo....456o
+o......o...o....456o
+oooooooo...o....123o
+...........o789ooooo
+]])
+end
+  Spawn("player", 3.5, 6)
+  Spawn("key", 17.5, 3.5)
+  Global("lock", 10.5, 9.5)
+  Global("chest", 5.5, 6.5, "start")
 end
 
 function reject()
@@ -47,15 +66,17 @@ osoooo...o.......ooo
 oooooo...ooooo---ooo
 oooo/............ooo
 oooo.............ooo
-oooo...........ooooo
-ooso...........ooooo
-oooo...........ososo
-ooooooaaaooooooooooo
-oooooooooooooooosooo
+oooo..........oooooo
+ooso.............ooo
+oooo.............oso
+ooooooaaaooooo...ooo
+osoooooooooooooooooo
 oooooooooooooooooooo
 ]])
   
   Spawn("player", 11.5, 11)
+  Global("lock", 13.5, 10.5)
+  Global("generic", 15.5, 12.5)
   Spawn("chest", 12, 5.5, "nailbiter")
   Spawn("chest", 4.5, 4.5, "nailbiter")
 end
