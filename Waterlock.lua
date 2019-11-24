@@ -14,14 +14,14 @@ function start(is_wet)
 if is_wet then
     ApplyTiles(villa, 0, 0, [[
 oooooooooooooooooooo
-o...............789o
-o...............456o
+o............o..789o
+oooooooooooooo..456o
 o...............456o
 o...............456o
 o......o.....o..456o
 o......o^^^^^o..456o
 o.oooooooowooooo456o
-o...o.......789o456o
+o...o.....-.789o456o
 o...o.......456o456o
 o-..o..o....456o123o
 o......ooooo456wwwwo
@@ -33,14 +33,14 @@ oooooooo...o456wwwwo
 else
     ApplyTiles(villa, 0, 0, [[
 oooooooooooooooooooo
-o..................o
-o..................o
+o............o.....o
+oooooooooooooo.....o
 o..................o
 o...............789o
 o......o.....o..456o
 o......o.....o..456o
 o.oooooooo^ooooo456o
-o...o..........o456o
+o...o.....-....o456o
 o...o..........o456o
 o-..o..o.......o456o
 o......ooooo....456o
