@@ -12,33 +12,33 @@ local crazy = { o = "glitch", z = "block_ul", ["#"] = "ceil", ["?"] = "pillar",
 
 function start(is_wet)
 ApplyTiles(metal, 0, 0, [[
-xxxxxxxxxxxxxxxxxxxx
-|aaaaaaaa||aaaaaaaa|
 |aaaaaaaa||aaaaaaaa|
 |aaaaaaaa||aaaaaaaa|
 |aaoxxxxx||xxxxxoaa|
 |aaaaaaaa||aaaaaaaa|
 |aaaaaaaa||aaaaaaaa|
-|aaaaaaaa||aaaaaaaa|
-jjjjjjkoa||aohjjjjjj
-nnnnnnm.a||a.bnnnnnn
-nnnnnnm.a||a.bnnnnnn
-nnnnnnm.oooo.bnnnnnn
-nnnnnnm......bnnnnnn
-nnnnnnm......bnnnnnn
-nnnnnnm------bnnnnnn
+jjjjkxxoa||aoxxhjjjj
+nnnnm.aaa||aaa.bnnnn
+nnnnm.aaa||aaa.bnnnn
+nnnnm.-oxxxxo-.bnnnn
+nnnnm..|....|..bnnnn
+nnnnm..|....|..bnnnn
+nnnnm.-o.oo.o-.bnnnn
+nnnnm....||....bnnnn
+nnnnm....||....bnnnn
+nnnnm----||----bnnnn
 ]])
 
-  Spawn("player", 10, 13)
-  Spawn("generic", 6, 3.5)
-  Spawn("chest", 3, 7.5, "storageA")
-  Spawn("chest", 6, 7.5, "roomA")
+  Spawn("player", 10, 10)
+  Spawn("generic", 6, 1.5)
+  Spawn("chest", 3, 4.5, "storageA")
+  Spawn("chest", 6, 4.5, "roomA")
   
-  Spawn("chest", 14, 7.5, "roomB")
-  Spawn("chest", 17, 7.5, "storageB")
-  Spawn("generic", 12, 3.5)
-  Spawn("key", 14, 3.5)
-  Spawn("generic", 16, 3.5)
+  Spawn("chest", 14, 4.5, "roomB")
+  Spawn("chest", 17, 4.5, "storageB")
+  Spawn("generic", 12, 1.5)
+  Spawn("key", 14, 1.5)
+  Spawn("generic", 16, 1.5)
 end
 
 function storageA(is_wet)
