@@ -13,29 +13,29 @@ local black = { o = "glitch", s = "glitchd", ["-"] = "glitchledge", w = "water",
 function start(is_wet)
 ApplyTiles(metal, 0, 0, [[
 xxxxxxxxxxxxxxxxxxxx
-|aaaaaaaa||aaaaaaaa|
-|aaaaaaaa||aaaaaaaa|
-|aaaaaaaa||aaaaaaaa|
-|aaoxxxxx||xxxxxoaa|
+|aaaaaaaaaaaaaaaaaa|
+|aaaaaaaaaaaaaaaaaa|
+|aaaaaaaaaaaaaaaaaa|
+|xxxxxxxxxxxxxxxoaa|
 |aaaaaaaa||aaaaaaaa|
 |aaaaaaaa||aaaaaaaa|
 |aaaaaaaa||aaaaaaaa|
 jjjjjjkoa||aohjjjjjj
 nnnnnnm.a||a.bnnnnnn
 nnnnnnm.a||a.bnnnnnn
-nnnnnnm.oooo.bnnnnnn
+nnnnnnm.oxxo.bnnnnnn
 nnnnnnm......bnnnnnn
 nnnnnnm......bnnnnnn
 nnnnnnm------bnnnnnn
 ]])
 
   Spawn("player", 10, 13)
-  Spawn("generic", 6, 3.5)
+  --Spawn("generic", 6, 3.5)
   Spawn("chest", 4.5, 7.5, "roomA")
   
   Spawn("chest", 15.5, 7.5, "roomB")
-  Spawn("generic", 13, 3.5)
-  Spawn("box", 15, 3.5)
+  Spawn("generic", 5.5, 3.5)
+  Spawn("box", 14.5, 3.5)
 end
 
 function roomA(is_wet)
