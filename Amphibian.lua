@@ -9,9 +9,6 @@ local black = { o = "glitch", s = "glitchd", ["-"] = "glitchledge", w = "water",
 				["7"] = "buoyul", ["8"] = "buoyu", ["9"] = "buoyur",
 				["4"] = "buoyl", ["5"] = "buoyc", ["6"] = "buoyr",
 				["1"] = "buoydl", ["2"] = "buoyd", ["3"] = "buoydr"}
-local crazy = { o = "glitch", z = "block_ul", ["#"] = "ceil", ["?"] = "pillar",
-                ["1"] = "char0", ["2"] = "char2", ["3"] = "char3",
-                ["4"] = "block", ["5"] = "box" }
 
 function start(is_wet)
 ApplyTiles(metal, 0, 0, [[
