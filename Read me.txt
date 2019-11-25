@@ -11,9 +11,9 @@ To play custom levels for the puzzle game Recursed, you need to do:
 
 For players not yet finish main game (including two in-game DLCs but not The Ice Palace):
 Some of the levels use late-game objects / skills. You'd better finish the main game before playing those levels. Here I will list where you need to reach in main game for better playing experience.
+Amphibian - Finish The Oobleck Conundrum DLC, or at least most of them.
 Climb - Finish all the main game, or at least unlocked the Invalid achievement in The Last Tapestry DLC.
 Disparadox - Finish Dungeon, finishing Ruins would be better.
-Fugitive - Finish The Oobleck Conundrum DLC, or at least most of them.
 Gems - Finish all the main game, or at least unlocked the Invalid achievement in The Last Tapestry DLC.
 Jam - Finish Temple, finishing The Void would be better.
 Jar Maker - Finish The Oobleck Conundrum DLC, or at least most of them.
