@@ -1,88 +1,121 @@
--- Stupid chest confusion
-
-local outrun = { o = "box", O = "monobox",
-                 T = "pave", x = "ceil", ["|"] = "pillar",
-                 ["-"] = "ledge", [":"] = "shroom1", [","] = "shroom2", [";"] = "shroom3",
-                 ["7"] = "block_ul", ["8"] = "block_u", ["9"] = "block_ur",
-                 ["4"] = "block_l", ["5"] = "block", ["6"] = "block_r",
-                 ["'"] = "ledgend" }
+local metal = { o = "box", O = "monobox", T = "pave", x = "ceil", ["|"] = "pillar", 
+				a = "acid", w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge",
+				["h"] = "block_ul", ["j"] = "block_u", ["k"] = "block_ur",
+                ["b"] = "block_l", ["n"] = "block", ["m"] = "block_r",
+				["7"] = "buoyul", ["8"] = "buoyu", ["9"] = "buoyur",
+				["4"] = "buoyl", ["5"] = "buoyc", ["6"] = "buoyr",
+				["1"] = "buoydl", ["2"] = "buoyd", ["3"] = "buoydr"}
+local black = { o = "glitch", s = "glitchd", ["-"] = "glitchledge", w = "water", a = "acid",
+				["7"] = "buoyul", ["8"] = "buoyu", ["9"] = "buoyur",
+				["4"] = "buoyl", ["5"] = "buoyc", ["6"] = "buoyr",
+				["1"] = "buoydl", ["2"] = "buoyd", ["3"] = "buoydr"}
 
 function start()
-  ApplyTiles(outrun, 0, 0, [[
-xxxxxxxxxxxxxxxxxxxx
-|..................|
-|..................|
-|..................|
-|.............oo...7
-|..................4
-|........O.........4
-|..................4
-|...O............788
-9................455
-6................455
-6.......O........455
-6..............78888
-6,;:;,:,.......45555
-88889TTTTTTTTTT45555
+  ApplyTiles(metal, 0, 0, [[
+nnm...............|.
+nnm...............|.
+nnm...............|.
+nnm...............|.
+nnm..............hjj
+nnm..........o...bnn
+nnm..........|...bnn
+nnm..........|...bnn
+jjjjjjjjjjjjjk...bnn
+nnnnnnnnnnnnnmo.obnn
+nnnnnnnnnnnnnmjjjbnn
+nnnnnnnnnnnnnmnnnbnn
+nnnnnnnnnnnnnmnnnbnn
+nnnnnnnnnnnnnmnnnbnn
+nnnnnnnnnnnnnmnnnbnn
 ]])
-  Spawn("player", 16, 11)
-  Spawn("chest", 15, 3.5, "goal")
+  Spawn("player", 5, 7)
+  Spawn("key", 7.5, 7.5)
+  Spawn("key", 10.5, 7.5)
+  Spawn("box", 15, 8.5)
+  Spawn("box", 16, 8.5)
+  Spawn("chest", 15.5, 9.5, "goal")
 end
 
 function goal()
-    ApplyTiles(outrun, 0, 0, [[
-xxxxxxxxxxxxx......|
-|...........|......|
-|...........|......|
-|---------o.|.oxxxx|
-|xxxxxo...|.|-.....|
-|.....|...|.|......|
-|.....|...|.|----..|
-|.....|o..|.|......|
-9...o.|...|.|o...o-o
-6...|.|...|.|....|..
-6...|.o..o|.|....o..
-6...|.....|.o.....-o
-89.79.....|.........
-56.46888889.........
-56x46555556888888889
+  ApplyTiles(metal, 0, 0, [[
+nnnn|xxxxxxxxxxxxxx|
+nnnn|..............|
+nnnn|..............|
+nnnn|..............|
+xxxxoxxxxo.........|
+|........|.......ox|
+|........|.........|
+|........|o........|
+|.oo-oxxx|.........|
+|........|.......ox|
+|........|.........|
+jk.oxo.o.oo........|
+nm.....|...........|
+nm.....|..........hj
+nmjjjjjjjjjjjjjjjjbn
 ]])
-  Spawn("key", 2.5, 13.5)
-  Spawn("box", 1.8, 11.5)
-  Spawn("box", 3.2, 11.5)
-  Spawn("player", 6.5, 12)
-  Spawn("box", 8.5, 12.5)
-  Spawn("lock", 17.5, 12.5)
-  Spawn("chest", 19.5, 13.5, "empty")
-  Spawn("key", 13.5, 7.5)
-  Spawn("lock", 15.5, 1.5)
-  Spawn("crystal", 17.5, 1.5)
+  Spawn("player", 3, 7)
+  Global("lock", 4.5, 9.5)
+  Global("lock", 5.51, 6.5)
+  Spawn("crystal", 6.5, 2.5)
+  Global("chest", 7.5, 7.5, "goal")
+  Global("lock", 8.5, 2.5)
+  Global("lock", 18.5, 7.5)
 end
 
-function empty()
-    ApplyTiles(outrun, 0, 0, [[
-xxxxxxxxxxxxxxxxxxxx
-|555|5555555555|555|
-|578|8888888888|895|
-|545|5555555555|565|
-88889xxxxxxxxxx78888
-55556..........45555
-55556..........45555
-55556..........45555
-55556..........45555
-55556..........45555
-55556888888888845555
-55556555555555545555
-55556555555555545555
-55556555555555545555
-55556555555555545555
+-- not done
+function reject()
+  ApplyTiles(black, 0, 0, [[
+ooooooooooo......ooo
+ooooooooooo......ooo
+ooooooooooo......ooo
+oooooooooooooo...ooo
+ooo..............ooo
+ooo..............ooo
+ooo..............ooo
+ooo..............ooo
+ooo..........o---ooo
+ooo..........o...ooo
+ooo..........o...ooo
+ooo..........o---ooo
+ooooooo------o...ooo
+ooooooo......o...ooo
+ooooooo......ooooooo
 ]])
-  Spawn("player", 7.5, 9)
-  Global("box", 12.5, 9.5)
+
+  Spawn("player", 15.5, 13)
+  Spawn("diamond", 11.5, 1.5)
+end
+
+function dia(is_wet)
+if is_wet then
+
+else
+  ApplyTiles(black, 0, 0, [[
+ooooooo.o........ooo
+ooooooo.o.oooooaaooo
+ooooooo.o.o...oaaooo
+ooooooo.o.o...oooooo
+ooooooo.o.o......ooo
+ooooooo.o.o......ooo
+ooo.....o.o......ooo
+ooo.....o.o......ooo
+ooo.....o.o......ooo
+ooo.ooooo.o......ooo
+ooo.......o......ooo
+ooo.......o......ooo
+ooo.......o......ooo
+ooosoooooooooooooooo
+oooooooooooooooooooo
+]])
+end
+
+  Spawn("player", 10, 12)
+  Spawn("diamond", 15.5, 3.5)
+  Global("fan", 16.6, 7.5)
 end
 
 tiles = "tiles/outrun"
 pattern = "backgrounds/void"
-dark = { 0.04, 0.08, 0.12 }
-light = { 0.06, 0.17, 0.21 }
-
+dark = { start = {0.04, 0.08, 0.12}, reject = {0.06, 0.17, 0.21} }
+light = { start = {0.06, 0.17, 0.21}, reject = {0.1, 0.25, 0.33} }
