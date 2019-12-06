@@ -8,81 +8,6 @@ local outrun = { o = "box", O = "monobox",
 
 local glitch = { o = "glitch", [">"] = "glitchd", ["-"] = "glitchledge" }
 
-function start()
-  ApplyTiles(outrun, 0, 0, [[
-|..................|
-|..................|
-|..................|
-|.oo.oo.oxxo.oo.oo.|
-|..|.|...||...|.|..7
-|..|.|...||...|.|..4
-|xxo.oxxxxxxxxo.oxx4
-|..................4
-|..................4
-|..................4
-|..................4
-9.oxxxo.o..o.oxxxo.4
-6...|...|..|...|...4
-6...|...|..|...|...4
-88889TTTTTTTTTT78888
-]])
-  Spawn("player", 10, 2)
-  Spawn("chest", 2, 5.5, "A")
-  Spawn("chest", 7.5, 5.5, "B")
-  --Spawn("chest", 12.5, 5.5, "C")
-  --Spawn("chest", 18, 5.5, "D")
-  --Spawn("chest", 2.5, 13.5, "E")
-  --Spawn("chest", 6.5, 13.5, "F")
-  --Spawn("chest", 10, 13.5, "G")
-  --Spawn("chest", 13.5, 13.5, "H")
-  --Spawn("chest", 17.5, 13.5, "I")
-end
-
-function A()
-  ApplyTiles(outrun, 0, 0, [[
-xxxxxxxxxxxxxxxxxxxx
-|...|..............|
-|...|..............|
-|xo.o..............|
-|.............oo...7
-|..................4
-|........O.........4
-|..................4
-|...O............788
-9................455
-6................455
-6.......O........455
-6..............78888
-6,;:;,:,.......45555
-88889TTTTTTTTTT45555
-]])
-  Spawn("player", 2, 2)
-  Global("chest", 15, 3.5, "A2")
-  Spawn("chest", 18, 7.5, "A1")
-  Spawn("chest", 16, 11.5, "A1")
-end
-
-function A1()
-  ApplyTiles(outrun, 0, 0, [[
-|55|xxxxxxxxxxxxxxxx
-|55|...............|
-|55|...............|
-|55|...............|
-oxxo...............|
-9..................|
-6..................|
-6..................|
-6..................|
-6............,:....|
-6............7888888
-8889.........4555555
-5556.......788888888
-5556.......455555555
-5556TTTTTTT455555555
-]])
-  Spawn("player", 6, 13)
-end
-
 function A2()
   ApplyTiles(outrun, 0, 0, [[
 xxxxxxxxxxxxxxxx|55|
@@ -105,7 +30,7 @@ xxxxxxxxxxxxxxxx|55|
   Spawn("chest", 3.5, 7.5, "crystal")
 end
 
-function B()
+function start()
   ApplyTiles(outrun, 0, 0, [[
 |...|..............|
 |...|..............|
@@ -124,35 +49,11 @@ function B()
 889---TTTTTTTT455555
 ]])
   Spawn("player", 2, 2)
-  Global("chest", 15, 2.5, "B")
+  Global("chest", 15, 2.5, "start")
   Spawn("chest", 18, 7.5, "A2")
   Spawn("box", 2.5, 13.5)
   Spawn("lock", 4.5, 12.5)
   Global("key", 2.5, 6.5)
-end
-
-function C()
-  ApplyTiles(outrun, 0, 0, [[
-xxxxxxxxxxxxxxxxxxxx
-|...|..............|
-|...|..............|
-|xo.o..............|
-|.............oo...7
-|..................4
-|........O.........4
-|..................4
-|...O............788
-9................455
-6................455
-6.......O........455
-6..............78888
-6,;:;,:,.......45555
-88889TTTTTTTTTT45555
-]])
-  Spawn("player", 2, 2)
-  Global("chest", 15, 3.5, "A2")
-  Spawn("chest", 18, 7.5, "A1")
-  Spawn("chest", 16, 11.5, "A1")
 end
 
 function crystal()
@@ -202,7 +103,8 @@ oooooooooooooooooooo
   Spawn("chest", 8.0, 10.5, "dungeon")
   
   Spawn("lock", 11, 4.5)
-  Global("lock", 13.25, 4.5)
+  Global("lock", 12.5, 4.5)
+  Spawn("lock", 14, 4.5)
   Spawn("lock", 15.5, 4.5)
   Spawn("diamond", 17.5, 4.5)
   
@@ -211,7 +113,7 @@ oooooooooooooooooooo
   Spawn("lock", 15.5, 9.5)
   Global("fan", 17.5, 10.5)
   
-  Spawn("record", 5.6, 10.5, "sounds/voices/v5r")
+  Spawn("record", 4.6, 10.5, "sounds/voices/v5r")
 
 end
 
