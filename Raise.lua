@@ -51,8 +51,8 @@ xxxxoxxxxo.........|
 |........|.........|
 jk.oxo.o.oo........|
 nm.....|...........|
-nm.....|........hhhj
-nmjjjjjjjjjjjjjjjjbn
+nm.....|........hjjj
+nmjjjjjjjjjjjjjjbnnn
 ]])
   Spawn("player", 3, 7)
   Global("lock", 4.5, 9.5)
