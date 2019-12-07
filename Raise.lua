@@ -51,7 +51,7 @@ xxxxoxxxxo.........|
 |........|.........|
 jk.oxo.o.oo........|
 nm.....|...........|
-nm.....|..........hj
+nm.....|........hhhj
 nmjjjjjjjjjjjjjjjjbn
 ]])
   Spawn("player", 3, 7)
@@ -59,60 +59,126 @@ nmjjjjjjjjjjjjjjjjbn
   Global("lock", 5.51, 6.5)
   Spawn("crystal", 6.5, 2.5)
   Global("chest", 7.5, 7.5, "goal")
-  Global("lock", 8.5, 2.5)
-  Global("lock", 18.5, 7.5)
+  Spawn("lock", 8.5, 2.5)
+  Spawn("lock", 18.5, 7.5)
 end
 
--- not done
+-- paradox. It is a pit that the fan doesn't work on locks. The green lock was designed not green.
 function reject()
   ApplyTiles(black, 0, 0, [[
-ooooooooooo......ooo
-ooooooooooo......ooo
-ooooooooooo......ooo
+oooooooooo.......ooo
+oooooooooo.......oso
+oooooooooo.......ooo
 oooooooooooooo...ooo
-ooo..............ooo
-ooo..............ooo
-ooo..............ooo
-ooo..............ooo
-ooo..........o---ooo
 ooo..........o...ooo
 ooo..........o...ooo
-ooo..........o---ooo
-ooooooo------o...ooo
-ooooooo......o...ooo
-ooooooo......ooooooo
+ooo..........o...ooo
+ooo..........o...ooo
+ooo..........o...ooo
+ooo...o..........ooo
+ooo...o..........ooo
+ooo...o..........ooo
+ooo---oooooooooooooo
+oso...ooooooooooooso
+ooo...oooooooooooooo
 ]])
 
-  Spawn("player", 15.5, 13)
+  Spawn("player", 10.5, 11)
   Spawn("diamond", 11.5, 1.5)
+  Global("lock", 13.5, 10.5)
+  Spawn("lock", 3.95, 13.5)
+  Spawn("lock", 5.05, 13.5)
+  Spawn("chest", 4.5, 11.5, "loop")
 end
 
-function dia(is_wet)
+function loop(is_wet)
 if is_wet then
-
+ApplyTiles(black, 0, 0, [[
+oaaaaaaaaoaaaaaaaaao
+oaaaaaaaaoaoaaaoaaao
+oaaaoaaaaoaoaaaoaaao
+oaaaoaaaaoaoooooaaao
+oaaaoaaaaoaoaaaaaaao
+o---o-aaaoaoaaaaaaao
+oaaaoaaaaoaoaaaooooo
+oaaaoaaaaoaoaaaoooso
+oaaao-aaaoaoaaaooooo
+oaaaoaaaaoaoaaaooooo
+oaaaoaaaaoaoaaaooooo
+oaaao-aaaoaoaaaooooo
+oaaaoaaaaaaaaaaooooo
+oaaaoaaaaaaaaaaosooo
+oaaaoooooooo---ooooo
+]])
 else
-  ApplyTiles(black, 0, 0, [[
-ooooooo.o........ooo
-ooooooo.o.oooooaaooo
-ooooooo.o.o...oaaooo
-ooooooo.o.o...oooooo
-ooooooo.o.o......ooo
-ooooooo.o.o......ooo
-ooo.....o.o......ooo
-ooo.....o.o......ooo
-ooo.....o.o......ooo
-ooo.ooooo.o......ooo
-ooo.......o......ooo
-ooo.......o......ooo
-ooo.......o......ooo
-ooosoooooooooooooooo
+ApplyTiles(black, 0, 0, [[
+o........o.........o
+o........o.o...o...o
+o...o....o.o...o...o
+o...o....o.ooooo...o
+o...o....o.o.......o
+o---o-...o.o.......o
+o...o....o.o...ooooo
+o...o....o.o...oooso
+o...o-...o.o...ooooo
+o...o....o.o...ooooo
+o...o....o.o...ooooo
+o...o-...o.o...ooooo
+o...o..........ooooo
+o...o..........osooo
+o...oooooooo---ooooo
+]])
+end
+  Spawn("player", 2.5, 4)
+  Global("fan", 6.1, 13.5)
+  Global("chest", 7.5, 13.5, "loop")
+  Spawn("chest", 12.5, 2.5, "storage")
+  Spawn("chest", 13, 2.5, "storage")
+  Spawn("chest", 13.5, 2.5, "storage")
+  Spawn("chest", 14, 2.5, "storage")
+  Spawn("chest", 14.5, 2.5, "storage")
+end
+
+function storage(is_wet)
+if is_wet then
+ApplyTiles(black, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooaaaaaaaaaaaaaaooo
+oooaaaaaaaaaaaaaaooo
+oooaaaaaaaaaaaaaaooo
+oooaaaooaaaaooaaaooo
+oooaaaaoaaaaoaaaaooo
+oooaaaaooaaooaaaaooo
+oooaaaaaoaaoaaaaaooo
+oooaaaaaooooaaaaaooo
+oooaaaaaaooaaaaaaooo
+oooaaaaaaooaaaaaaooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+oooooooooooooooooooo
+]])
+else
+ApplyTiles(black, 0, 0, [[
+oooooooooooooooooooo
+oooooooooooooooooooo
+ooo..............ooo
+ooo..............ooo
+ooo..............ooo
+ooo...ooaaaaoo...ooo
+ooo....oaaaao....ooo
+ooo....ooaaoo....ooo
+ooo.....oaao.....ooo
+ooo.....oooo.....ooo
+ooo......oo......ooo
+ooo......oo......ooo
+oooooooooooooooooooo
+oooooooooooooooooooo
 oooooooooooooooooooo
 ]])
 end
-
-  Spawn("player", 10, 12)
-  Spawn("diamond", 15.5, 3.5)
-  Global("fan", 16.6, 7.5)
+  Spawn("player", 5.5, 11)
+  Global("key", 10, 8.5)
 end
 
 tiles = "tiles/outrun"
