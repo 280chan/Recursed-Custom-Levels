@@ -17,9 +17,9 @@ oooooooooooooooooooo
 o............o..789o
 oooooooooooooo..456o
 o...............456o
-o.....79........456o
-o....o13.....o..456o
-o....oww^^^^^o..456o
+o...............456o
+o......o.....o..456o
+o......o^^^^^o..456o
 o.oooooooowooooo456o
 o...o.....-.789o456o
 o...o.......456o456o
@@ -37,8 +37,8 @@ o............o.....o
 oooooooooooooo.....o
 o..................o
 o...............789o
-o....o79.....o..456o
-o....o13.....o..456o
+o......o.....o..456o
+o......o.....o..456o
 o.oooooooo^ooooo456o
 o...o.....-....o456o
 o...o..........o456o
@@ -49,10 +49,10 @@ oooooooo...o....123o
 ...........o789ooooo
 ]])
 end
-  Spawn("player", 3.5, 6)
+  Spawn("player", 5.5, 6)
   Spawn("key", 17.5, 3.5)
   Global("lock", 10.5, 9.5)
-  Global("chest", 15, 6.5, "start")
+  Global("chest", 3.5, 6.5, "start")
 end
 
 function reject()
