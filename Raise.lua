@@ -96,10 +96,10 @@ if is_wet then
 ApplyTiles(black, 0, 0, [[
 oaaaaaaaaoaaaaaaaaao
 oaaaaaaaaoaoaaaoaaao
-oaaaoaaaaoaoaaaoaaao
 oaaaoaaaaoaoooooaaao
 oaaaoaaaaoaoaaaaaaao
-o---o-aaaoaoaaaaaaao
+oaaaoaaaaoaoaaaaaaao
+o---o-aaaoaoaaaooooo
 oaaaoaaaaoaoaaaooooo
 oaaaoaaaaoaoaaaoooso
 oaaao-aaaoaoaaaooooo
@@ -113,30 +113,30 @@ oaaaoooooooo---ooooo
 else
 ApplyTiles(black, 0, 0, [[
 o........o.........o
-o........o.o...o...o
-o...o....o.o...o...o
+o........o.oaaao...o
 o...o....o.ooooo...o
 o...o....o.o.......o
-o---o-...o.o.......o
+o...o....o.o.......o
+o---o-...o.o...ooooo
 o...o....o.o...ooooo
-o...o....o.o...oooso
+o...o....o.o...ososo
 o...o-...o.o...ooooo
 o...o....o.o...ooooo
 o...o....o.o...ooooo
 o...o-...o.o...ooooo
 o...o..........ooooo
-o...o..........osooo
+o...o..........ososo
 o...oooooooo---ooooo
 ]])
 end
   Spawn("player", 2.5, 4)
   Global("fan", 6.1, 13.5)
   Global("chest", 7.5, 13.5, "loop")
-  Spawn("chest", 12.5, 2.5, "storage")
-  Spawn("chest", 13, 2.5, "storage")
-  Spawn("chest", 13.5, 2.5, "storage")
-  Spawn("chest", 14, 2.5, "storage")
-  Spawn("chest", 14.5, 2.5, "storage")
+  Spawn("chest", 12.5, 1.5, "storage")
+  Spawn("chest", 13, 1.5, "storage")
+  Spawn("chest", 13.5, 1.5, "storage")
+  Spawn("chest", 14, 1.5, "storage")
+  Spawn("chest", 14.5, 1.5, "storage")
 end
 
 function storage(is_wet)
@@ -144,16 +144,16 @@ if is_wet then
 ApplyTiles(black, 0, 0, [[
 oooooooooooooooooooo
 oooooooooooooooooooo
-oooaaaaaaaaaaaaaaooo
-oooaaaaaaaaaaaaaaooo
-oooaaaaaaaaaaaaaaooo
-oooaaaooaaaaooaaaooo
-oooaaaaoaaaaoaaaaooo
-oooaaaaooaaooaaaaooo
-oooaaaaaoaaoaaaaaooo
-oooaaaaaooooaaaaaooo
-oooaaaaaaooaaaaaaooo
-oooaaaaaaooaaaaaaooo
+ooo..............ooo
+ooo..............ooo
+ooo..............ooo
+ooo...ooaaaaoo...ooo
+ooo....oaaaao....ooo
+ooo....ooaaoo....ooo
+ooo.....oaao.....ooo
+ooo.....oooo.....ooo
+ooo......oo......ooo
+ooo......oo......ooo
 oooooooooooooooooooo
 oooooooooooooooooooo
 oooooooooooooooooooo
@@ -165,8 +165,8 @@ oooooooooooooooooooo
 ooo..............ooo
 ooo..............ooo
 ooo..............ooo
-ooo...ooaaaaoo...ooo
-ooo....oaaaao....ooo
+ooo...oo....oo...ooo
+ooo....o....o....ooo
 ooo....ooaaoo....ooo
 ooo.....oaao.....ooo
 ooo.....oooo.....ooo
