@@ -2,9 +2,9 @@ local metal = {["7"] = "buoy_ul", ["9"] = "buoy_ur",
                 ["4"] = "buoy_l", ["6"] = "buoy_r",
                 ["1"] = "buoy_dl", ["3"] = "buoy_dr",
                 ["<"] = "widdershins", [">"] = "clockwise",
-                E = "panel_k1", F = "panel_k2", B = "panel_k3",
-                o = "box", ["="] = "girder_h", ["|"] = "girder_v",
-                w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge" }
+                h = "pipedr", j = "pipedl", b = "pipeur", n = "pipeul",
+                o = "box", ["#"] = "wetbox", ["="] = "pipeh", ["|"] = "pipev",
+                w = "water", ["^"] = "watersurface", g = "girder", ["-"] = "ledge" }
 local black = { o = "glitch", s = "glitchhole", ["-"] = "glitchledge", w = "water"}
 local crazy = { o = "glitch", z = "cloud", ["#"] = "wetbox", ["?"] = "girder",
                 ["1"] = "ledge", ["2"] = "glitchledge", ["3"] = "cloudledge",
@@ -16,21 +16,21 @@ local cloud = { ["<"] = "cloud_l", o = "cloud", [">"] = "cloud_r", ["-"] = "clou
 
 function start()
 ApplyTiles(metal, 0, 0, [[
-ooooooo.oooooooooooo
-o..................o
-o..................o
-o..................o
-o---o--------...o..o
-o...o...........o..o
-o...o........oooo..o
-o...o........o.....o
-o...ooooo....o.....o
-o...o........o..o..o
-o...o...oooooo..o..o
-o...o...........o..o
-o...ooo.........oooo
-o...ooo.........o<>o
-o...ooooooooooooo<>o
+h=====n.b==========j
+|..................|
+|..................|
+|..................|
+|---o--------...o..|
+|...|...........|..|
+|...|........h==n..|
+|...|........|.....|
+|...|gggo....|.....|
+|...|........|..o..|
+|...|...o====n..|..|
+|...|...........|gg|
+|...o=j.........|<>|
+|...|<|.........|<>|
+|...b=ngggggggggb==n
 ]])
   Global("chest", 6, 11.5, "start")
   Spawn("ruby", 2.5, 2.5)
