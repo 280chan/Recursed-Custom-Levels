@@ -2,9 +2,9 @@ local metal = {["7"] = "buoy_ul", ["9"] = "buoy_ur",
                 ["4"] = "buoy_l", ["6"] = "buoy_r",
                 ["1"] = "buoy_dl", ["3"] = "buoy_dr",
                 ["<"] = "widdershins", [">"] = "clockwise",
-                E = "panel_k1", F = "panel_k2", B = "panel_k3",
-                o = "box", ["="] = "girder_h", ["|"] = "girder_v",
-                w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge" }
+                h = "pipedr", j = "pipedl", b = "pipeur", n = "pipeul",
+                o = "box", ["#"] = "wetbox", ["="] = "pipeh", ["|"] = "pipev",
+                w = "water", ["^"] = "watersurface", g = "girder", ["-"] = "ledge" }
 local black = { o = "glitch", s = "glitchhole", ["-"] = "glitchledge", w = "water"}
 local crazy = { o = "glitch", z = "cloud", ["#"] = "wetbox", ["?"] = "girder",
                 ["1"] = "ledge", ["2"] = "glitchledge", ["3"] = "cloudledge",
@@ -14,23 +14,23 @@ local cloud = { ["<"] = "cloud_l", o = "cloud", [">"] = "cloud_r", ["-"] = "clou
 				
 -- main
 				
-function start(is_wet)
+function start()
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooow1313o
-o............oo....o
-o..................o
-o..................o
-o..............ooooo
-owwwwwwwwwwwwwwwwwwo
-ooooowwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwoooo
-owwwwwwwwwwwwwwwwwwo
-oooowwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwooo
-owwwwwwwwwwwwwwwwo<>
-oooooooooooooooooo<>
+h============jw1313|
+|............bn....|
+|..................|
+|..................|
+|..............oggg|
+|^^^^^^^^^^^^^^wwww|
+|ggg#wwwwwwwwwwwwww|
+|wwwwwwwwwwwwwwwwww|
+|wwwwwwwwwwwwwww#gg|
+|wwwwwwwwwwwwwwwwww|
+|gg#wwwwwwwwwwwwwww|
+|wwwwwwwwwwwwwwwwww|
+|wwwwwwwwwwwwwwwwh=n
+|wwwwwwwwwwwwwwww|<>
+b================n<>
 ]])
   Spawn("generic", 6, 13.5)
   Global("chest", 8, 13.5, "roomA")
@@ -40,40 +40,40 @@ end
 function roomA(is_wet)
 if is_wet then
   ApplyTiles(metal, 0, 0, [[
-oooooooooooooow1313o
-o............oo....o
-o..................o
-o..................o
-o..............ooooo
-owwwwwwwwwwwwwwwwwwo
-ooooowwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwoooo
-owwwwwwwwwwwwwwwwwwo
-oooowwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwwwo
-owwwwwwwwwwwwwwwwooo
-owwwwwwwwwwwwwwwwo<>
-oooooooooooooooooo<>
+h============jw1313|
+|............bn....|
+|..................|
+|..................|
+|..............oggg|
+|^^^^^^^^^^^^^^wwww|
+|ggg#wwwwwwwwwwwwww|
+|wwwwwwwwwwwwwwwwww|
+|wwwwwwwwwwwwwww#gg|
+|wwwwwwwwwwwwwwwwww|
+|gg#wwwwwwwwwwwwwww|
+|wwwwwwwwwwwwwwwwww|
+|wwwwwwwwwwwwwwwwh=n
+|wwwwwwwwwwwwwwww|<>
+b================n<>
 ]])
   Spawn("crystal", 17.5, 2.5)
 else
 	ApplyTiles(metal, 0, 0, [[
-oooooooooooooo.7979o
-o............oo4646o
-o..............4646o
-o..............1313o
-o..............ooooo
-o..................o
-ooooo..............o
-o..................o
-o...............oooo
-o..................o
-oooo...............o
-o..................o
-o................ooo
-o................o<>
-oooooooooooooooooo<>
+h============j.7979|
+|............bn4646|
+|..............4646|
+|..............1313|
+|..............oggg|
+|..................|
+|gggo..............|
+|..................|
+|...............ogg|
+|..................|
+|ggo...............|
+|..................|
+|................h=n
+|................|<>
+b================n<>
 ]])
 end
   Spawn("player", 10, 13)
