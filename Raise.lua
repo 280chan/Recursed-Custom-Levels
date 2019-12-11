@@ -95,8 +95,8 @@ function loop(is_wet)
 if is_wet then
 ApplyTiles(black, 0, 0, [[
 oaaaaaaaaoaaaaaaaaao
-oaaaaaaaaoaoaaaoaaao
-oaaaoaaaaoaoooooaaao
+oaaaaaaaaoaoaaaaaoao
+oaaaoaaaaoaoooooooao
 oaaaoaaaaoaoaaaaaaao
 oaaaoaaaaoaoaaaaaaao
 o---o-aaaoaoaaaooooo
@@ -113,8 +113,8 @@ oaaaoooooooo---ooooo
 else
 ApplyTiles(black, 0, 0, [[
 o........o.........o
-o........o.oaaao...o
-o...o....o.ooooo...o
+o........o.oaaaaao.o
+o...o....o.ooooooo.o
 o...o....o.o.......o
 o...o....o.o.......o
 o---o-...o.o...ooooo
@@ -137,6 +137,10 @@ end
   Spawn("chest", 13.5, 1.5, "storage")
   Spawn("chest", 14, 1.5, "storage")
   Spawn("chest", 14.5, 1.5, "storage")
+  Spawn("chest", 15, 1.5, "storage")
+  Spawn("chest", 15.5, 1.5, "storage")
+  Spawn("chest", 16, 1.5, "storage")
+  Spawn("chest", 16.5, 1.5, "storage")
 end
 
 function storage(is_wet)
