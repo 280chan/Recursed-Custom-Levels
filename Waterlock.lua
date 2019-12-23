@@ -13,39 +13,39 @@ local glitch = { o = "glitch", ["/"] = "glitchd", s = "glitchsymbol", ["-"] = "g
 function start(is_wet)
 if is_wet then
     ApplyTiles(villa, 0, 0, [[
-oooooooooooooooooooo
-o............o..789o
-oooooooooooooo..456o
-o...............456o
-o...............456o
-o......o.....o..456o
-o......o^^^^^o..456o
-o.oooooooowooooo456o
-o...o.....-.789o456o
-o...o.......456o456o
-o-..o..o....456o123o
-o......ooooo456wwwwo
-o......o...o456wwwwo
-oooooooo...o456wwwwo
+T......ooooooooooooo
+|......o.....o..789|
+|......ooooooo..456|
+|...............456|
+|...............456|
+|......o.....o..456|
+|......o^^^^^o..456|
+|.oooooooowooooo456|
+|...o.....-.789o456|
+|...o.......456o456|
+|-..o..o....456o123|
+|......ooooo456wwww|
+|......o...o456wwww|
+oooooooo...o456wwww|
 ...........o456ooooo
 ]])
   Spawn("crystal", 17.5, 12.5)
 else
     ApplyTiles(villa, 0, 0, [[
-oooooooooooooooooooo
-o............o.....o
-oooooooooooooo.....o
-o..................o
-o...............789o
-o......o.....o..456o
-o......o.....o..456o
-o.oooooooo^ooooo456o
-o...o.....-....o456o
-o...o..........o456o
-o-..o..o.......o456o
-o......ooooo....456o
-o......o...o....456o
-oooooooo...o....123o
+T......ooooooooooooo
+|......o.....o.....|
+|......ooooooo.....|
+|..................|
+|...............789|
+|......o.....o..456|
+|......o.....o..456|
+|.oooooooo^ooooo456|
+|...o.....-....o456|
+|...o..........o456|
+|-..o..o.......o456|
+|......ooooo....456|
+|......o...o....456|
+oooooooo...o....123|
 ...........o789ooooo
 ]])
 end
