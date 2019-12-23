@@ -121,7 +121,6 @@ end
   Spawn("crystal", 2.5, 2.5)
   Spawn("player", 3.6, 13)
   Spawn("yield", 5.4, 13)
-  Spawn("lock", 4.5, 4.5)
   Spawn("lock", 7.5, 1.5)
   Spawn("chest", 12.5, 7.5, "keyroom")
 end
