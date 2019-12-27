@@ -208,7 +208,7 @@ end
   Spawn("yield", 11.5, 8)
   Spawn("lock", 1.5, 4.5)
   Spawn("lock", 4.5, 7.5)
-  Global("lock", 10.5, 2.5)
+  Spawn("lock", 10.5, 2.5)
   Spawn("crystal", 3.5, 12.5)
 end
 
