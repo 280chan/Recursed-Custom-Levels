@@ -27,7 +27,7 @@ xxxxxxxxxxxxxxxx|55|
 5555456TTT------4555
 ]])
   Spawn("player", 8.5, 13)
-  Spawn("chest", 3.5, 7.5, "crystal")
+  Spawn("crystal", 3.5, 3.5)
 end
 
 function start()
@@ -54,29 +54,6 @@ function start()
   Spawn("box", 2.5, 13.5)
   Spawn("lock", 4.5, 12.5)
   Global("key", 2.5, 6.5)
-end
-
-function crystal()
-  ApplyTiles(outrun, 0, 0, [[
-xxxxxxxxxxxxxxxx|55|
-|...............|55|
-|...............|55|
-9...............|55|
-6...............oxxo
-6..................|
-6..................|
-6...,:;............|
-8888889............|
-5555556...........,|
-5555556.........7888
-5555556;:.......4555
-555578889.......4555
-555545556.......4555
-5555455568889TTT4555
-]])
-
-  Spawn("player", 14, 13)
-  Spawn("crystal", 13.5, 7.5)
 end
 
 function reject()
