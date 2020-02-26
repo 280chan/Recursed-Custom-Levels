@@ -12,48 +12,48 @@ local black = { o = "glitch", [">"] = "glitchd", s = "glitchsymbol", ["-"] = "gl
 function start(is_wet)
 if is_wet then
     ApplyTiles(metal, 0, 0, [[
-o........ooo.......o
-o^o......79o.......o
-ooo......46o.......o
-oww^^^^-o46oooo..o.o
-owwwwwwww13wwow^^o^o
-oo--wwwwwwwwwowwwowo
-ow^^wwwoowwowowooowo
-owwwwwww79wowwwo79wo
-ooowwwww46wowwwo46wo
-owwwwwww46wowwwo46wo
-owwwwwwo13wooooo13wo
-owwwwwwowwwo79wwwwwo
-ooowwwwowwwo46wwwwwo
-..owwwwowwwo46wwwwwo
-..oooooooooo13oooooo
+o.......oooo.......o
+o........79o.......o
+o^o......46o.......o
+ooo.....o46oooo..o.o
+oww^^^--w13wwow^^o^o
+owwwww^^wwwwwowwwowo
+owwwww--owwowowooowo
+owwwww^^owwowwwo79wo
+owwwww--owwowwwo46wo
+owwwww^^owwowwwo46wo
+owwwww--owwooooo13wo
+owwwww^^owwo79wwwwwo
+owwwww--owwo46wwwwwo
+owwwww^^owwo46wwwwwo
+oooooooooooo13oooooo
 ]])
   Spawn("yield", 17, 13)
 else
     ApplyTiles(metal, 0, 0, [[
-o........ooo.......o
+o.......oooo.......o
+o..........o.......o
 o^o........o.......o
-ooo........o.......o
-o......-o..oooo..o.o
+ooo.....o..oooo..o.o
+o.....--....o...o.o
 o............o...o.o
-oo--.........o...o.o
-o......oo79o.o.ooo.o
-o........46o...o...o
-ooo......46o...o...o
-o........13o...o...o
-o......o79.ooooo79.o
-o......o46.o....46.o
-ooo....o46.o....46.o
-..o....o13^o^^^^13^o
-..oooooooooo79oooooo
+o.....--o79o.o.ooo.o
+o.......o46o...o...o
+o.....--o46o...o...o
+o.......o13o...o...o
+o.....--owwooooo79.o
+o.......owwo....46.o
+o.....--owwo....46.o
+o.......owwo^^^^13^o
+oooooooooooo79oooooo
 ]])
   Spawn("crystal", 13.5, 12.5)
 end
   Spawn("player", 4, 13)
   Spawn("yield", 13.5, 2)
   Spawn("yield", 13.5, 9)
-  Global("key", 6, 13.5)
-  Global("chest", 2, 11.5, "start")
+  Global("key", 2, 13.5)
+  Global("chest", 6, 13.5, "start")
   Global("lock", 10, 4.5)
   Spawn("lock", 15.5, 12.5)
 end
