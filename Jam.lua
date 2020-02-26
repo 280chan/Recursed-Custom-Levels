@@ -1,25 +1,24 @@
-local metal = {["7"] = "buoy_ul", ["9"] = "buoy_ur",
+local metal = { w = "water", ["^"] = "water_s",
+				["<"] = "wingwet_l", [">"] = "wingwet_r",
+                ["7"] = "buoy_ul", ["9"] = "buoy_ur",
                 ["4"] = "buoy_l", ["6"] = "buoy_r",
                 ["1"] = "buoy_dl", ["3"] = "buoy_dr",
-                ["<"] = "widdershins", [">"] = "clockwise",
-                E = "panel_k1", F = "panel_k2", B = "panel_k3",
-                o = "box", ["="] = "girder_h", ["|"] = "girder_v",
-                w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge" }			
-local crazy = { g = "glitch", V = "cloud", [":"] = "wetbox", ["+"] = "girder",
-                ["/"] = "ledge", ["&"] = "glitchledge", ["~"] = "cloudledge",
-                ["-"] = "clockwise", ["*"] = "widdershins" }
-local black = { o = "glitch", s = "glitchhole", ["-"] = "glitchledge", w = "water"}
+                o = "panel", ["["] = "winglet_l", ["]"] = "winglet_r",
+                ["h"] = "pillar_l", ["j"] = "pillar_c", ["k"] = "pillar_r",
+                ["n"] = "screw_u", ["m"] = "screw_d", ["-"] = "glitchledge",
+                ["y"] = "brick_l", ["u"] = "brick_cr", ["i"] = "brick_broke"  }
+local black = { o = "glitch", [">"] = "glitchd", s = "glitchsymbol", ["-"] = "glitchledge", ["^"] = "water_s"}
 
 function start(is_wet)
 if is_wet then
     ApplyTiles(metal, 0, 0, [[
 o........ooo.......o
-owo......79o.......o
+o^o......79o.......o
 ooo......46o.......o
-owwwwww-o46oooo..o.o
-owwwwwwww13wwowwwowo
+oww^^^^-o46oooo..o.o
+owwwwwwww13wwow^^o^o
 oo--wwwwwwwwwowwwowo
-owwwwwwoowwowowooowo
+ow^^wwwoowwowowooowo
 owwwwwww79wowwwo79wo
 ooowwwww46wowwwo46wo
 owwwwwww46wowwwo46wo
@@ -33,7 +32,7 @@ ooowwwwowwwo46wwwwwo
 else
     ApplyTiles(metal, 0, 0, [[
 o........ooo.......o
-owo........o.......o
+o^o........o.......o
 ooo........o.......o
 o......-o..oooo..o.o
 o............o...o.o
@@ -45,7 +44,7 @@ o........13o...o...o
 o......o79.ooooo79.o
 o......o46.o....46.o
 ooo....o46.o....46.o
-..o....o13wowwww13wo
+..o....o13^o^^^^13^o
 ..oooooooooo79oooooo
 ]])
   Spawn("crystal", 13.5, 12.5)
@@ -66,14 +65,14 @@ o..................o
 o..................o
 ooooo----ooooooooooo
 ooooo......o.......o
-ooooo......o.......o
+oo>oo......o.......o
 ooooo......o.......o
 ooooo......ooooo...o
 o..........o.......o
 o..........o.......o
 o...o....o.o.......o
 o...o....o.....ooooo
-o...o....o.....ooooo
+o...o....o.....oosoo
 ooooo....o.....ooooo
 oooooooooooooooooooo
 ]])
@@ -87,51 +86,91 @@ oooooooooooooooooooo
 end
 
 function loop(is_wet)
-  ApplyTiles(black, 0, 0, [[
+if is_wet then
+    ApplyTiles(black, 0, 0, [[
 oooooooooooooooooooo
 o..................o
 o..................o
 o..................o
 ooooo------ooooooooo
-o..........ooooooooo
-o..........ooooooooo
+o..........oooooo>oo
+o..........oo>oooooo
 o..........ooooooooo
 o..................o
 o..................o
 o..................o
 o..........ooooo...o
+o..........oosoo...o
+o^^^^^^^^^^ooooo^^^o
+oooooooooooooooooooo
+]])
+else
+    ApplyTiles(black, 0, 0, [[
+oooooooooooooooooooo
+o..................o
+o..................o
+o..................o
+ooooo------ooooooooo
+o..........oooooo>oo
+o..........oo>oooooo
+o..........ooooooooo
+o..................o
+o..................o
+o..................o
 o..........ooooo...o
+o..........oosoo...o
 o..........ooooo...o
 oooooooooooooooooooo
 ]])
-  Spawn("chest", 17.5, 13.5, "empty")
-  Global("fan", 4.5, 13.5)
-  Spawn("player", 7.5, 13)
-  Global("chest", 13.5, 3.5, "loop")
+end
+	Spawn("chest", 17.5, 13.5, "empty")
+	Global("fan", 4.5, 13.5)
+	Spawn("player", 7.5, 13)
+	Global("chest", 13.5, 3.5, "loop")
 end
 
 function empty(is_wet)
-  ApplyTiles(black, 0, 0, [[
+if is_wet then
+    ApplyTiles(black, 0, 0, [[
 oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-oooooooooooooooooooo
-o..........ooooooooo
-o..........ooooooooo
-o..........ooooooooo
-o..........ooooooooo
-o..........ooooooooo
-o..........ooooooooo
-o..........ooooooooo
-o..........ooooooooo
-o..........ooooooooo
+o..................o
+o..................o
+o..................o
+ooooooooo------ooooo
+oosoooooo..........o
+oooooosoo..........o
+ooooooooo..........o
+o..................o
+o..................o
+o..................o
+o...ooooo..........o
+o...oo>oo..........o
+o^^^ooooo^^^^^^^^^^o
 oooooooooooooooooooo
 ]])
-  Spawn("player", 2.5, 13)
+else
+    ApplyTiles(black, 0, 0, [[
+oooooooooooooooooooo
+o..................o
+o..................o
+o..................o
+ooooooooo------ooooo
+oosoooooo..........o
+oooooosoo..........o
+ooooooooo..........o
+o..................o
+o..................o
+o..................o
+o...ooooo..........o
+o...oo>oo..........o
+o...ooooo..........o
+oooooooooooooooooooo
+]])
+end
+  Spawn("player", 12.5, 13)
 end
 
-tiles = "tiles/clockwork"
-pattern = "backgrounds/tubes"
-dark = { start = { 0.1, 0.02, 0.04 }, reject = {0.06, 0.17, 0.21} }
-light = { start = {0.24, 0.07, 0.10}, reject = {0.1, 0.25, 0.33} }
+tiles = "tiles/temple"
+pattern = "backgrounds/library"
+dark = {0, 0.05, 0.06}
+light = {0, 0.14, 0.23}
