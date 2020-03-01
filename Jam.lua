@@ -15,17 +15,17 @@ if is_wet then
 o.......oooo.......o
 o........79o.......o
 o^o......46o.......o
-ooo.....o46oooo..o.o
-oww^^^--w13wwow^^o^o
-owwwww^^wwwwwowwwowo
-owwwww--owwowowooowo
-owwwww^^owwowwwo79wo
-owwwww--owwowwwo46wo
-owwwww^^owwowwwo46wo
-owwwww--owwooooo13wo
-owwwww^^owwo79wwwwwo
-owwwww--owwo46wwwwwo
-owwwww^^owwo46wwwwwo
+owo.....o46oooo..o.o
+ooo-^^^^w13wwow^^o^o
+oww^wwwwwwwwwowwwowo
+owwwwwwoowwowowooowo
+owwwwwwoowwowwwo79wo
+ooooooooowwowwwo46wo
+owwwwwwwowwowwwo46wo
+owwwwwwwowwooooo13wo
+owwwwwwwowwo79wwwwwo
+owwwwwwwowwo46wwwwwo
+owwwwwwwowwo46wwwwwo
 oooooooooooo13oooooo
 ]])
   Spawn("yield", 17, 13)
@@ -34,26 +34,26 @@ else
 o.......oooo.......o
 o..........o.......o
 o^o........o.......o
-ooo.....o..oooo..o.o
-o.....--.....o...o.o
+owo.....o..oooo..o.o
+ooo-.........o...o.o
 o............o...o.o
-o.....--o79o.o.ooo.o
-o.......o46o...o...o
-o.....--o46o...o...o
+o......oo79o.o.ooo.o
+o......oo46o...o...o
+ooooooooo46o...o...o
 o.......o13o...o...o
-o.....--owwooooo79.o
+o.......owwooooo79.o
 o.......owwo....46.o
-o.....--owwo....46.o
-o.......owwo^^^^13^o
+o.......owwo....46.o
+o.......owwo^^^^13.o
 oooooooooooo79oooooo
 ]])
   Spawn("crystal", 13.5, 12.5)
 end
-  Spawn("player", 4, 13)
+  Spawn("player", 3.5, 7)
   Spawn("yield", 13.5, 2)
   Spawn("yield", 13.5, 9)
-  Global("key", 2, 13.5)
-  Global("chest", 6, 13.5, "start")
+  Global("key", 5, 7.5)
+  Global("chest", 2, 7.5, "start")
   Global("lock", 10, 4.5)
   Spawn("lock", 15.5, 12.5)
 end
