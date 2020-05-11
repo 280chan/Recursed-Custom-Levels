@@ -103,14 +103,14 @@ end
 function dia()
   ApplyTiles(glitch, 0, 0, [[
 oooooooooooooooooooo
-oooooooooooooooooooo
+ooo.....oooooooooooo
 ooo..............ooo
-ooo..............ooo
-ooo..............ooo
+ooo..o...........ooo
+ooo..o...........ooo
 ooo..ooooooooooooooo
 ooo..o........o..ooo
-ooo..o.ooooo..o..ooo
-ooo..o.o......o.oooo
+ooo--o.ooooo..o..ooo
+ooo--o.o......o.oooo
 ooo--o.o.........ooo
 ooo--o.o.........ooo
 ooo....o.........ooo
@@ -120,6 +120,7 @@ oooooooooooooooooooo
 ]])
 
   Spawn("player", 10, 12)
+  Spawn("crystal", 15.5, 9.5)
   Spawn("diamond", 15.5, 3.5)
   Global("fan", 16.6, 7.5)
 
