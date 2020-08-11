@@ -109,7 +109,7 @@ ooo..o...........ooo
 ooo..o...........ooo
 ooo..ooooooooooooooo
 ooo..o........o..ooo
-ooo--o.ooooo..o..ooo
+ooo--o.oooo...o..ooo
 ooo--o.o......o.oooo
 ooo--o.o.........ooo
 ooo--o.o.........ooo
