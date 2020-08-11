@@ -86,7 +86,7 @@ oooooooooooooooooooo
 ooooaaaaaaaaaaaaoooo
 ooooaaaaaaaaaaaaoooo
 ooooaaaaaaaaaaaaoooo
-ooooooooooooooaaoooo
+oooooooooooooaaaoooo
 ooooaaaaaaaaaaaaoooo
 ooooaaaaaaaaaaaaoooo
 ooooaaaaaaaaaaaaoooo
@@ -104,7 +104,7 @@ oooooooooooooooooooo
 oooo............oooo
 oooo............oooo
 oooo............oooo
-oooooooooooooo..oooo
+ooooooooooooo...oooo
 oooo............oooo
 oooo............oooo
 oooo............oooo

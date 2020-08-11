@@ -4,11 +4,11 @@ local metal = { o = "box", x = "ceil", ["|"] = "pillar",
                 ["b"] = "block_l", ["n"] = "block", ["m"] = "block_r",
 				["7"] = "buoyul", ["8"] = "buoyu", ["9"] = "buoyur",
 				["4"] = "buoyl", ["5"] = "buoyc", ["6"] = "buoyr",
-				["1"] = "buoydl", ["2"] = "buoyd", ["3"] = "buoydr"}
-local black = { o = "glitch", s = "glitchd", ["-"] = "glitchledge", a = "acid" }
+				["1"] = "buoydl", ["2"] = "buoyd", ["3"] = "buoydr", s = "watersurface"}
+local black = { o = "glitch", s = "glitchd", ["-"] = "glitchledge", a = "acid", t = "acidsurface" }
 local crazy = { o = "glitch", z = "block_ul", ["#"] = "ceil", ["?"] = "pillar",
                 ["1"] = "char0", ["2"] = "char2", ["3"] = "char3",
-                ["4"] = "block", ["5"] = "box" }
+                ["4"] = "block", ["5"] = "box", ["-"] = "ledge" }
 
 function start()
 ApplyTiles(metal, 0, 0, [[
@@ -20,7 +20,7 @@ xxxxxxxxxxxxxxxxxxxx
 |..................|
 |..................|
 |..................|
-|wwwhjjjjjjjjjjkwww|
+|ssshjjjjjjjjjjksss|
 |wwwbnnnnnnnnnnmwww|
 jjjjjjjknnnnhjjjjjjj
 nnnnnnnmnnnnbnnnnnnn
@@ -91,8 +91,8 @@ xxxxo.....oxxxxxxxxx
 oxxxxxxxxxo........|
 789.......|........|
 456.......oxxo.....|
-456wwwo.........789|
-456www|wwwwwwwww456|
+456ssso.........789|
+456www|sssssssss456|
 123www|wwwwwwwww456|
 wwwwww|---------123|
 wwwwww|wwwwwwwwwwww|
@@ -139,7 +139,7 @@ xo...............bnn
 |456...........hjjjj
 |456...........bnnnn
 |456hjk........bnnnn
-|456bnmwwwwwwwwbnnnn
+|456bnmssssssssbnnnn
 |456bnmwwwwwwhjjjjjj
 |456bnmwwwwwwbnnnnnn
 k456bnmxxxxxxbnnnnnn
@@ -174,19 +174,18 @@ o##oo521...54o?oo.??
 o#oo5o21....432oo.o.
 .#o.o43......15ooo.o
 .#ooz1.......4o2o14.
-.#z#oo2.......3o?zzo
+.#ooz1o......4o2o14.
+.#o.o43######15ooo.o
+.#o.o43......15ooo.o
+.#ooz1o......4o2o14.
+.#z#oo2------o3o?zzo
 ###o4o.......ooooooo
-oz#ooo.........ooz?z
-z.?oo...........o#o.
-ozoo...........oozzo
-o#ooo...........o2oo
-zozo............ozo?
-ozoz............?o?o
-zozo##?###zzo???z?o?
-oz5#?##4z?#z?oo??o1o
+.#z#o2........3o?zzo
+#o4o...........ooooo
+.#o2............3o?z
+#o4o.............ooo
 ]])
-
-  Spawn("player", 6.4, 12)
+  Spawn("player", 9.4, 8)
 end
 
 function reject(is_wet)
@@ -198,23 +197,23 @@ o..................o
 o-oooooooooooooooooo
 o..................o
 o..................o
-o--oooooooooooo....o
+o--ooooooooooooo...o
 o..o...............o
 o..o...............o
 o..o...............o
-o..o.......ooooooooo
-o..oaaaaaaaoososoooo
-o..oaaaaaaaoooooooso
+o..o........oooooooo
+o..ottttttttososoooo
+o..oaaaaaaaaooooooso
 o..ooooooooooosooooo
 ]])
   Spawn("player", 5, 13)
   Global("key", 7, 13.5)
   Spawn("fan", 9, 13.5)
-  Global("lock", 11.5, 9.5)
-  Spawn("lock", 13, 9.5)
-  Spawn("lock", 14.5, 9.5)
+  Global("lock", 12.5, 9.5)
+  Spawn("lock", 14, 9.5)
+  Spawn("lock", 15.5, 9.5)
   Spawn("generic", 7.5, 3.5)
-  Spawn("lock", 11.5, 2.5)
+  Spawn("lock", 12.5, 2.5)
   Spawn("diamond", 16.5, 2.5)
 end
 
