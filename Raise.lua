@@ -60,7 +60,7 @@ nmjjjjjjjjjjjjjjbnnn
   Spawn("crystal", 6.5, 2.5)
   Global("chest", 7.5, 7.5, "goal")
   Spawn("lock", 8.5, 2.5)
-  Spawn("lock", 18.5, 7.5)
+  Spawn("lock", 18.5, 11.5)
 end
 
 -- paradox. It is a pit that the fan doesn't work on locks. The green lock was designed not green.
