@@ -239,10 +239,10 @@ ooooooooooooooooooos
 end
   Spawn("player", 10, 9)
   Global("fan", 5.5, 13.5)
-  Spawn("lock", 15.5, 12.5)
-  Spawn("lock", 4.5, 2.5)
-  Spawn("lock", 6.5, 2.5)
-  Spawn("lock", 8.5, 2.5)
+  Spawn("lock", 14.5, 12.5)
+  Spawn("lock", 5.5, 2.5)
+  Spawn("lock", 7.5, 2.5)
+  Spawn("lock", 9.5, 2.5)
   Spawn("yield", 8, 9)
   Spawn("diamond", 17.5, 2.5)
 end

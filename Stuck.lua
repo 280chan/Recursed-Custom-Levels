@@ -1,9 +1,10 @@
-local metal = {["7"] = "buoy_ul", ["9"] = "buoy_ur",
-                ["4"] = "buoy_l", ["6"] = "buoy_r",
-                ["1"] = "buoy_dl", ["3"] = "buoy_dr",
+local metal = { o = "box", x = "ceil", ["|"] = "pillar",
                 E = "panel_k1", F = "panel_k2", B = "panel_k3",
-                o = "box", ["="] = "girder_h", ["|"] = "girder_v",
+                ["="] = "girder_h", 
                 w = "water", [":"] = "back", ["'"] = "back_d", ["-"] = "ledge", a = "acid",
+				["h"] = "block_ul", ["j"] = "block_u", ["k"] = "block_ur",
+                ["b"] = "block_l", ["n"] = "block", ["m"] = "block_r",
+
 				s = "watersurface", ["q"] = "acidsurface"}
 local black = { o = "glitch", h = "glitchd", ["-"] = "glitchledge", w = "water", a = "acid", ["="] = "acidledge", s = "watersurface", ["q"] = "acidsurface"}
 local crazy = { o = "glitch", z = "block_ul", ["#"] = "ceil", ["?"] = "pillar",
@@ -14,21 +15,21 @@ local crazy = { o = "glitch", z = "block_ul", ["#"] = "ceil", ["?"] = "pillar",
 				
 function start()
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-ooo<>ooooooooo<>oooo
-oooooooo<ooooooooooo
-oo<>oooo>oo><ooooooo
-oooooooooooooooooooo
-ooo..............ooo
-ooo..............ooo
-ooo..............ooo
-ooo..............ooo
-ooo..............ooo
-oooooooooooooooooooo
-oooooooooooooooo>ooo
-oo>oooooooo<<ooo<ooo
-oo<ooooo<>ooooooo<>o
-oooooooooooooooooooo
+..|nnnnnnnnnnnnnn|..
+.hjjjjjjjjjjjjjjjjk.
+.bnnnnnnnnnnnnnnnnm.
+.bnnnnnnnnnnnnnnnnm.
+jjkxxxxxxxxxxxxxxhjj
+nnm..............bnn
+nnm..............bnn
+nnm..............bnn
+nnm..............bnn
+nnm..............bnn
+nnmjjjjjjjjjjjjjjbnn
+nnmnnnnnnnnnnnnnnbnn
+nnmnnnnnnnnnnnnnnbnn
+nnmnnnnnnnnnnnnnnbnn
+nnmnnnnnnnnnnnnnnbnn
 ]])
   Global("generic", 10, 9.5)
   Spawn("chest", 7.5, 9.5, "keyr")
@@ -39,39 +40,39 @@ end
 function wet(is_wet)
 if is_wet then
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-ooo<>ooooooooo<>oooo
-oooooooo<ooooooooooo
-oo<>oooo>oo><ooooooo
-oooooooooooooooooooo
-ooooo...........oooo
-ooooo...........oooo
-ooooo...........oooo
-ooooooooooooo...oooo
-o<>ooo>oooooosssoooo
-ooo><o>oooooowwwoooo
-oooooooooooooooooooo
-oo>oooooooo<<ooooooo
-oo<ooooo<>ooooooo<>o
-oooooooooooooooooooo
+nnnnnnnnnnnnnnnnnnnn
+nnhjjjjjjjjjjjjjjknn
+nnbnnnnnnnnnnnnnhjjj
+nnbnnnnnnnnnnnnnbnnn
+jjjjkxxxxxxxxxxxbnnn
+nnnnm...........bnnn
+nnnnm...........bnnn
+nnnnm...........bnnn
+jjjjjjjjjjjjk...bnnn
+nnnnnnnnnnnnmsssbnnn
+nnnnnnnnnnnnmwwwbnnn
+nnnnhjjjjjjjjjjjjjjj
+nnnnbnnnnnnnnnnnnnnn
+nnnnbnnnnnnnnnnnnnnn
+nnnnbnnnnnnnnnnnnnnn
 ]])
 else
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-ooo<>ooooooooo<>oooo
-oooooooo<ooooooooooo
-oo<>oooo>oo><ooooooo
-oooooooooooooooooooo
-ooooo...........oooo
-ooooo...........oooo
-ooooo...........oooo
-ooooooooooooo...oooo
-o<>ooo>oooooo...oooo
-ooo><o>oooooosssoooo
-oooooooooooooooooooo
-oo>oooooooo<<ooooooo
-oo<ooooo<>ooooooo<>o
-oooooooooooooooooooo
+nnnnnnnnnnnnnnnnnnnn
+nnhjjjjjjjjjjjjjjknn
+nnbnnnnnnnnnnnnnhjjj
+nnbnnnnnnnnnnnnnbnnn
+jjjjkxxxxxxxxxxxbnnn
+nnnnm...........bnnn
+nnnnm...........bnnn
+nnnnm...........bnnn
+jjjjjjjjjjjjk...bnnn
+nnnnnnnnnnnnm...bnnn
+nnnnnnnnnnnnmsssbnnn
+nnnnhjjjjjjjjjjjjjjj
+nnnnbnnnnnnnnnnnnnnn
+nnnnbnnnnnnnnnnnnnnn
+nnnnbnnnnnnnnnnnnnnn
 ]])
 end
   Spawn("player", 7, 7)
@@ -82,39 +83,39 @@ end
 function keyr(is_wet)
 if is_wet then
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-ooooaaaaaaaaaaaaoooo
-ooooaaaaaaaaaaaaoooo
-ooooaaaaaaaaaaaaoooo
-oooooooooooooaaaoooo
-ooooaaaaaaaaaaaaoooo
-ooooaaaaaaaaaaaaoooo
-ooooaaaaaaaaaaaaoooo
-oooooooooooooooooooo
-o<>ooo>ooooooooooooo
-ooo><o>ooooooooooooo
-oooooooooooooooooooo
-oo>oooooooo<<ooooooo
-oo<ooooo<>ooooooo<>o
-oooooooooooooooooooo
+aaa|xxxxxxxxxxxx|aaa
+aaa|aaaaaaaaaaaa|aaa
+aaa|aaaaaaaaaaaa|aaa
+aaa|aaaaaaaaaaaa|aaa
+aaa|xxxxxxxxoaaa|aaa
+aaa|aaaaaaaaaaaa|aaa
+aaa|aaaaaaaaaaaa|aaa
+aaa|aaaaaaaaaaaa|aaa
+ahjjjjjjjjjjjjjjjjka
+abnnnnnnnnnnnnnnnnma
+abnnnnnnnnnnnnnnnnma
+abnnnnnnnnnnnnnnnnma
+abnnnnnnnnnnnnnnnnma
+abnnnnnnnnnnnnnnnnma
+abnnnnnnnnnnnnnnnnma
 ]])
 else
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-oooo............oooo
-oooo............oooo
-oooo............oooo
-ooooooooooooo...oooo
-oooo............oooo
-oooo............oooo
-oooo............oooo
-oooooooooooooooooooo
-o<>ooo>ooooooooooooo
-ooo><o>ooooooooooooo
-oooooooooooooooooooo
-oo>oooooooo<<ooooooo
-oo<ooooo<>ooooooo<>o
-oooooooooooooooooooo
+...|xxxxxxxxxxxx|...
+...|............|...
+...|............|...
+...|............|...
+...|xxxxxxxxo...|...
+...|............|...
+...|............|...
+...|............|...
+.hjjjjjjjjjjjjjjjjk.
+.bnnnnnnnnnnnnnnnnm.
+.bnnnnnnnnnnnnnnnnm.
+.bnnnnnnnnnnnnnnnnm.
+.bnnnnnnnnnnnnnnnnm.
+.bnnnnnnnnnnnnnnnnm.
+.bnnnnnnnnnnnnnnnnm.
 ]])
 end
   Global("chest", 9.5, 3.5, "crys")
@@ -125,39 +126,39 @@ end
 function crys(is_wet)
 if is_wet then
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-oooooooooooooooooooo
-ooooo..............o
-ooooo..............o
-o..................o
-o..............ooooo
-o..................o
-ooooo..............o
-o..................o
-osssssssssssssoooooo
-owwwwwwwwwwwwwo..o.o
-oooooooooooooooooooo
-oo>oooooooo<<ooooooo
-oo<ooooo<>ooooooo<>o
-oooooooooooooooooooo
+nnnnnnnnnnnnnnnnnnnn
+nnnnoxxxxxxxxxxxxxxo
+nnnn|..............|
+oxxxo..............|
+|..................|
+|..............oxxx|
+|..................|
+|xxxo..............|
+|..................|
+|ssssssssssssshjjjjj
+|wwwwwwwwwwwwwbnnnnn
+jjjjjjjjjjjjjjbnnnnn
+nnnnnnnnnnnnnnbnnnnn
+nnnnnnnnnnnnnnbnnnnn
+nnnnnnnnnnnnnnbnnnnn
 ]])
 else
 ApplyTiles(metal, 0, 0, [[
-oooooooooooooooooooo
-oooooooooooooooooooo
-ooooo..............o
-ooooo..............o
-o..................o
-o..............ooooo
-o..................o
-ooooo..............o
-o..................o
-o.............oooooo
-o.............o..o.o
-oooooooooooooooooooo
-oo>oooooooo<<ooooooo
-oo<ooooo<>ooooooo<>o
-oooooooooooooooooooo
+nnnnnnnnnnnnnnnnnnnn
+nnnnoxxxxxxxxxxxxxxo
+nnnnm..............|
+oxxxo..............|
+|..................|
+|..............oxxx|
+|..................|
+|xxxo..............|
+|..................|
+|.............hjjjjj
+|.............bnnnnn
+jjjjjjjjjjjjjjbnnnnn
+nnnnnnnnnnnnnnbnnnnn
+nnnnnnnnnnnnnnbnnnnn
+nnnnnnnnnnnnnnbnnnnn
 ]])
 end
   Spawn("player", 2.5, 10)
