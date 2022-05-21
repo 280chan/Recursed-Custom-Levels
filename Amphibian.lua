@@ -156,15 +156,15 @@ ooooooooooo.......oo
 ooooooooooo.......oo
 ooooooooooo...o---oo
 ooooooooooo...o...oo
-oooooooo......o...oo
-oooooooo......o...oo
-oooooooo...owwoooooo
-ooooo......ooo78889o
-ooooo......ooo4...6o
-ooooo......ooo4...6o
-oowwwwwwoooooo4...6o
-oowwwwwwoooooo12223o
-oowwwwwwooooooaaaaao
+ooooooo.......o...oo
+ooooooo.......o...oo
+ooooooo...owwwoooooo
+oooo......oooo78889o
+oooo......oooo4...6o
+oooo......oooo4...6o
+owwwwwwooooooo4...6o
+owwwwwwooooooo12223o
+owwwwwwoooooooaaaaao
 ooooooooooooooaaaaao
 ]])
 else
@@ -174,20 +174,20 @@ ooooooooooo.......oo
 ooooooooooo.......oo
 ooooooooooo...o---oo
 ooooooooooo...o...oo
-oooooooo......o...oo
-oooooooo......o...oo
-oooooooo...o..oooooo
-ooooo......ooo.....o
-ooooo......ooo.....o
-ooooo......ooo.....o
-oo......oooooo.....o
-oo......oooooo.....o
-oo......ooooooaaaaao
+ooooooo.......o...oo
+ooooooo.......o...oo
+ooooooo...o...oooooo
+oooo......oooo.....o
+oooo......oooo.....o
+oooo......oooo.....o
+o......ooooooo.....o
+o......ooooooo.....o
+o......oooooooaaaaao
 oooooooooooooo78889o
 ]])
 end
-  Spawn("player", 3.5, 13)
-  Global("fan", 6.5, 13.5)
+  Spawn("player", 2.5, 13)
+  Global("fan", 5.5, 13.5)
   Spawn("key", 16.5, 6.5)
   Global("fan", 16.5, 11.5)
 end
